@@ -19,6 +19,7 @@ Observations:
 1. Given that 2 is the only even prime and the difference between 2 and the other primes grows much faster than the maximum possible digit sum of their product, it should be clear that 14 is the only even number with this property. For example, 53 - 2 = 51 is bigger than the largest possible digit sum for a 5-digit number, but 2 * 53 = 106, which is only a 3-digit number.
 
 2. For products of prime numbers between 3 and 50 million, the numbers with this property have digit sums of 14, 32, 50, 68, 86, 104, or 122. _Question_: Is the digit sum of every such number 18 _n_ - 4, for some natural number _n_?
+
 Examples of numbers with each of these digit sums: 
 - 14: 95 = 5 * 19
 - 32: 26969 = 149 * 181
