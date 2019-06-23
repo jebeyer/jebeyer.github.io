@@ -2,4 +2,9 @@
 layout: default
 ---
 
-# Welcome to James Beyer's Page
+This page is under construction.
+
+[About Me](./about.html)
+
+[DSDF Numbers](./dsdfnumbers.html)
+

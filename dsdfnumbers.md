@@ -18,7 +18,7 @@ A csv file with all DSDF numbers with prime factors less than a million can be f
 **Observations**:
 1. Given that 2 is the only even prime and the difference between 2 and the other primes grows much faster than the maximum possible digit sum of their product, it should be clear that 14 is the only even DSDF number.
 
-2. For products of prime numbers between 3 and 50 million, the DSDF numbers have digit sums of 14, 32, 50, 68, 86, 104, or 122. _Question_: Is the digit sum of every DSDF number 18_n_ - 4 for some natural number _n_?
+2. For products of prime numbers between 3 and 50 million, the DSDF numbers have digit sums of 14, 32, 50, 68, 86, 104, or 122. 
 
     digit sum | product          | factor a | factor b
     --------- | ---------------- | -------- | ---------
@@ -30,6 +30,8 @@ A csv file with all DSDF numbers with prime factors less than a million can be f
     104       | 57779776889897   | 7601249  | 7601353
     122       | 1599996799997879 | 39999899 | 40000021
 
+    _Question_: Is the digit sum of every DSDF number 18_n_ - 4 for some natural number _n_?
+    
 3. It is possible for multiple DSDF numbers to share a factor. That is, there are prime numbers _a < b < c_ such that either _ab_ and _ac_ are DSDF numbers or _ac_ and _bc_ are DSDF numbers. Here is one interesting set of numbers that share factors:
 
     product     | factor a | factor b
