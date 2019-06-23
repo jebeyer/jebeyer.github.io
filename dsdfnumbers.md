@@ -20,11 +20,30 @@ Observations:
 
 2. For products of prime numbers between 3 and 50 million, the DSDF numbers have digit sums of 14, 32, 50, 68, 86, 104, or 122. _Question_: Is the digit sum of every DSDF number 18_n_ - 4 for some natural number _n_?
 
-DSDF numbers with each of these digit sums: 
-- 14: 95 = 5 * 19
-- 32: 26969 = 149 * 181
-- 50: 6593999 = 2543 * 2593
-- 68: 399798869 = 19961 * 20029
-- 86: 169987989767 = 412253 * 412339
-- 104: 57779776889897 = 7601249 * 7601353
-- 122: 1599996799997879 = 39999899 * 40000021
+Examples of DSDF numbers with each of these digit sums: 
+| digit sum  | product | factor a | factor b |
+|---|---|---|---|
+| 14 | 95 | 5 | 19 |
+| 32 | 26969 | 149 | 181 |
+| 50 | 6593999 | 2543 | 2593 |
+| 68 | 399798869 | 19961 | 20029 |
+| 86 | 169987989767 | 412253 | 412339 |
+| 104 | 57779776889897 | 7601249 | 7601353 |
+| 122 | 1599996799997879 | 39999899 | 40000021 |
+
+3. It is possible for multiple DSDF numbers to share a factor. That is, there are prime numbers _a < b < c_ such that either _ab_ and _ac_ are DSDF numbers or _ac_ and _bc_ are DSDF numbers. Here is one interesting set of numbers that share factors:
+| product | factor a | factor b |
+|---|---|---|
+| 25449182159 | 159503 | _159553_ |
+| 25452054113 | _159521_ | _159553_ |
+| 25454925491 | _159521_ | 159571 |
+| 25457796869 | _159521_ | _159589_ |
+| 25460669471 | 159539 | _159589_ |
+
+4. There are DSDF numbers with nested factors. That is, DSDF numbers _xw_ and _yz_ with _x < y < z < w_. Here is one example:
+| product | factor a | factor b |
+|---|---|---|
+| 199553 | 431 | 463 |
+| 202451 | 443 | 457 |
+
+5. I have not found an instance of DSDF numbers _xy_ and _yz_ such that _x < y < z_. _Question_: Do such numbers exist?
