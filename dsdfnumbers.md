@@ -32,13 +32,14 @@ digit sum  | product | factor a | factor b
 122 | 1599996799997879 | 39999899 | 40000021
 
 3. It is possible for multiple DSDF numbers to share a factor. That is, there are prime numbers _a < b < c_ such that either _ab_ and _ac_ are DSDF numbers or _ac_ and _bc_ are DSDF numbers. Here is one interesting set of numbers that share factors:
-product | factor a | factor b
----|---|---
-25449182159 | 159503 | _159553_
+
+product     | factor a | factor b
+----------- | -------- | -----------
+25449182159 | 159503   | _159553_
 25452054113 | _159521_ | _159553_
 25454925491 | _159521_ | 159571
 25457796869 | _159521_ | _159589_
-25460669471 | 159539 | _159589_
+25460669471 | 159539   | _159589_
 
 4. There are DSDF numbers with nested factors. That is, DSDF numbers _xw_ and _yz_ with _x < y < z < w_. Here is one example:
 product | factor a | factor b
