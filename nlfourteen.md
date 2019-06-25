@@ -18,34 +18,34 @@ Let's say that a number is _like fourteen_ if it is the product of two distinct 
 
 1. Given that \\( 2 \\) is the only even prime and \\( p - 2 \\) grows much faster than the digit sum of \\( 2p \\), it is clear that \\( 14 \\) is the only even NLF.
 
-2. Other than \\( 14 \\), every NLF that I have found has a digit sum of \\( 18n - 4 \\) for some natural number \\( n \\). (_Is this true for all NLF?_)
+2. Other than \\( 14 \\), every NLF that I have found has a digit sum of \\( 18n - 4 \\) for some natural number \\( n \\). (_Is this true for all odd NLF?_)
 
-    digit sum | product          | factor a | factor b
-    --------- | ---------------- | -------- | ---------
-    14        | 95               | 5        | 19
-    32        | 26969            | 149      | 181
-    50        | 6593999          | 2543     | 2593
-    68        | 399798869        | 19961    | 20029
-    86        | 169987989767     | 412253   | 412339
-    104       | 57779776889897   | 7601249  | 7601353
-    122       | 1599996799997879 | 39999899 | 40000021
+    digit sum  | product           | factor a  | factor b
+    ---------- | ----------------- | --------- | ----------
+    14         | 95                | 5         | 19
+    32         | 26969             | 149       | 181
+    50         | 6593999           | 2543      | 2593
+    68         | 399798869         | 19961     | 20029
+    86         | 169987989767      | 412253    | 412339
+    104        | 57779776889897    | 7601249   | 7601353
+    122        | 1599996799997879  | 39999899  | 40000021
     
 3. It is possible for multiple NLF to share a factor. That is, there are prime numbers \\( a < b < c \\) such that either \\( ab \\) and \\( ac \\) are both NLF or \\( ac \\) and \\( bc \\) are both NLF. Here is an example:
 
-    product     | factor a | factor b
-    ----------- | -------- | -----------
-    25449182159 | 159503   | _159553_
-    25452054113 | _159521_ | _159553_
-    25454925491 | _159521_ | 159571
-    25457796869 | _159521_ | _159589_
-    25460669471 | 159539   | _159589_
+    product      | factor a    | factor b
+    ------------ | ----------- | -----------
+    25449182159  | 159503      | **159553**
+    25452054113  | **159521**  | **159553**
+    25454925491  | **159521**  | 159571
+    25457796869  | **159521**  | **159589**
+    25460669471  | 159539      | **159589**
 
 4. There are NLF with nested factors. That is, there are prime numbers \\( a < b < c < d \\) such that \\( ad \\) and \\( bc \\) are both NLF. Here is one example:
 
-    product | factor a | factor b
-    ------- | -------- | --------
-    199553  | 431      | 463
-    202451  | 443      | 457
+    product  | factor a  | factor b
+    -------- | --------- | ---------
+    199553   | 431       | 463
+    202451   | 443       | 457
 
 5. I haven't found any prime numbers \\( x < y < z \\) such that \\( xy \\) and \\( yz \\) are both NLF. (_Do such numbers exist?_)
 
