@@ -2,9 +2,14 @@
 layout: default
 ---
 
-This page is under construction.
+### Welcome
 
 [About Me](./about.html)
 
-[DSDF Numbers](./dsdfnumbers.html)
+[Links](./links.html)
+
+
+**Miscellaneous**:
+
+[Numbers Like Fourteen](./nlfourteen.html)
 
