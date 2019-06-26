@@ -14,6 +14,8 @@ Let's say that a number is _like fourteen_ if it is the [product of two primes](
 14, 95, 527, 851, 1247, 3551, 4307, 8051, 14351, 26969, 30227, 37769, 64769, 87953, 152051, 163769, 199553, 202451, 256793, 275369, 341969, 455369, 1070969, 1095953, 1159673, 1232051, 1625369, 1702769, 2005007, 2081993, 2116769, 3674633, 4040051, 4397153, 4523873, 4600769, 4941473, 5075753, 5405369, 5630873, 6036593, 6593999, 7144673, 7305953, 7935233, 9941153, 9997619, 10304051, 10477913, 11390369
 ```
 
+The first 1000 numbers like are fourteen can be downloaded [here](./assets/first1000.txt).
+
 **Observations**:
 
 1. Given that \\( 2 \\) is the only even prime and \\( p - 2 \\) grows much faster than the digit sum of \\( 2p \\), it is clear that \\( 14 \\) is the only even number like fourteen.
