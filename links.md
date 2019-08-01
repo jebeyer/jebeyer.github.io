@@ -6,8 +6,6 @@ layout: default
 
 [Huel](https://huel.mention-me.com/m/ol/hv6zg-james-beyer) - use this link for your first order and we both get $10 off.
 
-[Last.fm](https://www.last.fm/user/blahquaker)
-
 ---
 
 [University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
