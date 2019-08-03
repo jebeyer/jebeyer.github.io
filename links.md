@@ -26,4 +26,4 @@ layout: default
 
 ---
 
-[On-Line Encyclopedia of Integer Sequences](http://oeis.org/)
+[On-Line Encyclopedia of Integer Sequences](http://oeis.org/) [sequence A308821](https://oeis.org/A308821)
