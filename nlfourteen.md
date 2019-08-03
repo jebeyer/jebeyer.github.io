@@ -16,6 +16,8 @@ Let's say that a number is _like fourteen_ if it is the [product of two primes](
 
 The first 1000 numbers like are fourteen can be downloaded [here](./assets/first1000.txt). This list and the observations below were made with variations of the python scripts found [here](https://github.com/jebeyer/nlfourteen-py).
 
+_Update 2019-08-03: [OEIS sequence A308821](https://oeis.org/A308821)_.
+
 **Observations**:
 
 1. Given that \\( 2 \\) is the only even prime and \\( p - 2 \\) grows much faster than the digit sum of \\( 2p \\), it is clear that \\( 14 \\) is the only even number like fourteen.
