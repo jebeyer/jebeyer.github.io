@@ -10,11 +10,9 @@ layout: default
 
 [University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
 
-[Mathematics Geneaology Project](https://www.genealogy.math.ndsu.nodak.edu/)
-
-[arXiv](https://arxiv.org/)
-
 ---
+
+LaTeX Resources: 
 
 [LaTeX - Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
 
