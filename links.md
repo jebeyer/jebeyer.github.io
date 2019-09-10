@@ -4,11 +4,11 @@ layout: default
 
 ### Links
 
-[Huel](https://huel.mention-me.com/m/ol/hv6zg-james-beyer) - use this link for your first order and we both get $10 off.
+[University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
 
 ---
 
-[University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
+[On-Line Encyclopedia of Integer Sequences](http://oeis.org/) - [sequence A308821](https://oeis.org/A308821)
 
 ---
 
@@ -22,6 +22,3 @@ LaTeX Resources:
 
 [Inkscape](https://inkscape.org/)
 
----
-
-[On-Line Encyclopedia of Integer Sequences](http://oeis.org/) - [sequence A308821](https://oeis.org/A308821)
