@@ -18,6 +18,6 @@ I am a graduate student in mathematics, beginning in Fall 2019 at the University
 
 jebeyer at ou edu
 
-[LinkedIn](https://www.linkedin.com/in/james-beyer-72558767)
+<a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="drawing" width="48"/></a>
 
 [Last.fm](https://www.last.fm/user/blahquaker)
