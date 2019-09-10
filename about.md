@@ -4,7 +4,7 @@ layout: default
 
 ### About Me
 
-I am a graduate student in mathematics, beginning in Fall 2019 at the University of Oklahoma.
+<br/> I am a graduate student in mathematics at the University of Oklahoma.
 
 - MS, Pittsburg State University, 2019
     * Mathematics
@@ -13,6 +13,8 @@ I am a graduate student in mathematics, beginning in Fall 2019 at the University
 - BS, Evangel University, 2002
     * Major: Mathematics
     * Minors: Computer Science, Physics
+    
+Most of the time between those degrees was spent working as an engineer.
 
 ### Contact
 
