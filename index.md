@@ -4,7 +4,7 @@ layout: default
 
 ### Welcome
 
-[About Me](./about.html)
+<br/> [About Me](./about.html)
 
 [Links](./links.html)
 
