@@ -4,7 +4,7 @@ layout: default
 
 ### Links
 
----
+<br/><br/>
 
 [University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
 
