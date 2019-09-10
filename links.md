@@ -5,7 +5,6 @@ layout: default
 ### Links
 
 <br/>
-
 [University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
 
 ---
