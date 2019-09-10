@@ -4,6 +4,8 @@ layout: default
 
 ### Links
 
+---
+
 [University of Oklahoma - Department of Mathematics](http://math.ou.edu/)
 
 ---
@@ -22,3 +24,12 @@ LaTeX Resources:
 
 [Inkscape](https://inkscape.org/)
 
+---
+
+This website:
+
+[GitHub Pages](https://pages.github.com)
+
+[Jekyll](https://jekyllrb.com/)
+
+[Dinky theme](https://github.com/pages-themes/dinky) 
