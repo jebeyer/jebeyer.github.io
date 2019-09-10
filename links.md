@@ -13,21 +13,14 @@ layout: default
 ---
 
 LaTeX Resources: 
-
-[LaTeX - Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
-
-[Detexify](http://detexify.kirelabs.org/classify.html)
-
-[Commutative diagrams with TikZ](http://ctan.math.washington.edu/tex-archive/graphics/pgf/contrib/tikz-cd/tikz-cd-doc.pdf)
-
-[Inkscape](https://inkscape.org/)
+<br/> [LaTeX - Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
+<br/> [Detexify](http://detexify.kirelabs.org/classify.html) - find a symbol
+<br/> [Commutative diagrams with TikZ](http://ctan.math.washington.edu/tex-archive/graphics/pgf/contrib/tikz-cd/tikz-cd-doc.pdf)
+<br/> [Inkscape](https://inkscape.org/) - make vector graphics
 
 ---
 
 This website:
-
-[GitHub Pages](https://pages.github.com)
-
-[Jekyll](https://jekyllrb.com/)
-
-[Dinky theme](https://github.com/pages-themes/dinky) 
+<br/> [GitHub Pages](https://pages.github.com)
+<br/> [Jekyll](https://jekyllrb.com/)
+<br/> [Dinky theme](https://github.com/pages-themes/dinky) 
