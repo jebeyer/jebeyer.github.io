@@ -4,12 +4,11 @@ layout: default
 
 ### Welcome
 
-<br/> [About Me](./about.html)
+<br/> 
+James Beyer <br/>
+Graduate Student in Mathematics <br/>
+University of Oklahoma
 
-[Links](./links.html)
+---
 
-
-**Miscellaneous**:
-
-[Numbers Like Fourteen](./nlfourteen.html)
-
+This site is hosted on [GitHub Pages](https://pages.github.com) using the Dinky theme.
