@@ -4,7 +4,7 @@ layout: default
 
 ### Courses Taught
 
-<br/> (Instructor of record unless otherwise noted.)
+(Instructor of record unless otherwise noted.)
 
 #### University of Oklahoma - Norman, OK
 

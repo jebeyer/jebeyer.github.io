@@ -6,9 +6,12 @@ layout: default
 
 <br/> 
 James Beyer <br/>
-Graduate Student in Mathematics <br/>
-University of Oklahoma
+Graduate Student <br/>
+[Department of Mathematics](http://math.ou.edu/) <br/>
+[University of Oklahoma](http://www.ou.edu/)
+
+<br/>
 
 ---
 
-This site is hosted on [GitHub Pages](https://pages.github.com) using the Dinky theme.
+This site is hosted on [GitHub Pages](https://pages.github.com) using [Jekyll](https://jekyllrb.com/) with the [Dinky](https://github.com/pages-themes/dinky) theme.

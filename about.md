@@ -4,13 +4,14 @@ layout: default
 
 ### About Me
 
-<br/> I am a graduate student in mathematics at the University of Oklahoma.
+I am a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/).
 
-- MS, Pittsburg State University, 2019
+- MS, [Pittsburg State University](https://pittstate.edu/), 2019
     * Mathematics
     * Master's Project: _The Curve Complex_
+    * Advisor: Dr. Leah Childers
     
-- BS, Evangel University, 2002
+- BS, [Evangel University](https://www.evangel.edu/), 2002
     * Major: Mathematics
     * Minors: Computer Science, Physics
     
@@ -20,7 +21,7 @@ Most of the time between those degrees was spent working as an engineer.
 
 jebeyer at ou edu
 
-### Other Sites
+### Links
 
 <a href="https://github.com/jebeyer"><img src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub" width="48"/></a>
 <a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="LinkedIn" width="48"/></a>
