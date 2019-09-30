@@ -10,7 +10,9 @@ Graduate Student <br/>
 [Department of Mathematics](http://math.ou.edu/) <br/>
 [University of Oklahoma](http://www.ou.edu/)
 
-<br/>
+### Contact
+
+jebeyer at ou edu
 
 ---
 

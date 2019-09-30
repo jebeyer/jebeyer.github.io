@@ -17,10 +17,6 @@ I am a graduate student in [mathematics](http://math.ou.edu/) at the [University
     
 Most of the time between those degrees was spent working as an engineer.
 
-### Contact
-
-jebeyer at ou edu
-
 ### Links
 
 <a href="https://github.com/jebeyer"><img src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub" width="48"/></a>
