@@ -7,7 +7,7 @@ layout: default
 <br/> 
 James Beyer <br/>
 Graduate Student <br/>
-[Department of Mathematics](http://math.ou.edu/) <br/>
+[Department of Mathematics](https://math.ou.edu/) <br/>
 [University of Oklahoma](http://www.ou.edu/)
 
 ### Contact
