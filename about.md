@@ -6,12 +6,12 @@ layout: default
 
 I am a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/).
 
-- MS, [Pittsburg State University](https://pittstate.edu/), 2019
+- MS, [Pittsburg State University](https://pittstate.edu/), May 2019
     * Mathematics
     * Master's Project: _The Curve Complex_
     * Advisor: Dr. Leah Childers
     
-- BS, [Evangel University](https://www.evangel.edu/), 2002
+- BS, [Evangel University](https://www.evangel.edu/), December 2002
     * Major: Mathematics
     * Minors: Computer Science, Physics
     
