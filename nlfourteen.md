@@ -7,8 +7,6 @@ mathjax: true
 
 The number \\( 14 \\) has the property that the [sum of its digits](https://en.wikipedia.org/wiki/Digit_sum) is equal to the difference of its prime factors. That is, \\( 14 = 2 * 7 \\) and \\( 1 + 4 = 7 - 2 \\).
 
-I noticed this many years ago, but until recently, I never took the time to look for other such numbers. As it turns out, there are quite a few. (_Infinitely many?_)
-
 Let's say that a number is _like fourteen_ if it is the [product of two primes](https://en.wikipedia.org/wiki/Semiprime) and its digit sum is equal to the difference of its prime factors. The first fifty numbers like fourteen are:
 ```
 14, 95, 527, 851, 1247, 3551, 4307, 8051, 14351, 26969, 30227, 37769, 64769, 87953, 152051, 163769, 199553, 202451, 256793, 275369, 341969, 455369, 1070969, 1095953, 1159673, 1232051, 1625369, 1702769, 2005007, 2081993, 2116769, 3674633, 4040051, 4397153, 4523873, 4600769, 4941473, 5075753, 5405369, 5630873, 6036593, 6593999, 7144673, 7305953, 7935233, 9941153, 9997619, 10304051, 10477913, 11390369
