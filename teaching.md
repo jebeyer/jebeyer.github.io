@@ -19,6 +19,6 @@ layout: default
 
 #### University of Missouri - Columbia, MO
 
-2004 Spring - Intermediate Algebra <br/>
-2003 Fall - Intermediate Algebra
+2004 Spring - Intermediate Algebra (2 sections) <br/>
+2003 Fall - Intermediate Algebra (2 sections)
 
