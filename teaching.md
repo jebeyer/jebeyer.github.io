@@ -8,6 +8,7 @@ layout: default
 
 #### University of Oklahoma - Norman, OK
 
+2020 Fall - Calculus for Business, Life, and Social Sciences I <br/>
 2020 Spring - Functions and Modeling for Business, Life, and Social Sciences <br/>
 2019 Fall - Calculus and Analytic Geometry I (discussion leader)
 
