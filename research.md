@@ -6,7 +6,7 @@ layout: default
 
 #### Research
 
-My primary research interests are in geometry and topology, but I'm also interested in dynamics and mathematical physics.
+This semester I've been learning about [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra).
 
 For my MS at Pittsburg State University, I wrote a survey paper on the [curve complex](https://en.wikipedia.org/wiki/Curve_complex). <br> My advisor was Dr. Leah Childers.
 
