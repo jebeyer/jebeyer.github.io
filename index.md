@@ -14,6 +14,8 @@ Graduate Student <br/>
 
 jebeyer at ou edu
 
+[Calendly](https://calendly.com/jebeyer/15min)
+
 ---
 
 This site is hosted on [GitHub Pages](https://pages.github.com) using [Jekyll](https://jekyllrb.com/) with the [Dinky](https://github.com/pages-themes/dinky) theme.
