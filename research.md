@@ -12,6 +12,6 @@ For my MS at Pittsburg State University, I wrote a survey paper on the [curve co
 
 #### Recreation
 
-[Numbers Like Fourteen (OEIS sequence A308821)](./nlfourteen.html)
+[OEIS sequence A308821](https://oeis.org/A308821)
 
 
