@@ -6,9 +6,9 @@ layout: default
 
 #### Research
 
-My current research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra). 
+I am currently a third-year graduate student working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra).
 
-For my MS, I wrote a survey paper on the [curve complex](https://en.wikipedia.org/wiki/Curve_complex). <br> My advisor was Dr. Leah Childers.
+For my MS, I wrote a survey paper on the [curve complex](https://en.wikipedia.org/wiki/Curve_complex). My advisor was Leah Childers.
 
 #### Recreation
 

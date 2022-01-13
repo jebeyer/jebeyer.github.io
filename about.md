@@ -4,7 +4,7 @@ layout: default
 
 ### About Me
 
-I am a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/), currently in my third year.
+I am a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/).
 
 - MS, [Pittsburg State University](https://pittstate.edu/), May 2019
     * Mathematics
@@ -23,4 +23,5 @@ I enjoy seeking out new music and creating noise using synthesizers and electric
 <a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="LinkedIn" width="48"/></a>
 <a href="https://www.last.fm/user/blahquaker"><img src="./assets/lastfm-icon-512.png" alt="Last.fm" width="48"/></a>
 <a href="https://soundcloud.com/whistlingkitty"><img src="./assets/soundcloud-icon.png" alt="Last.fm" width="48"/></a>
-<a href="https://mathstodon.xyz"><img src="./assets/mastodon_logo.svg" alt="Mastodon" width="48"/></a>
+<a rel="me" href="https://mathstodon.xyz/@jebeyer"><img src="./assets/mastodon_logo.svg" alt="Mastodon" width="48"/></a>
+
