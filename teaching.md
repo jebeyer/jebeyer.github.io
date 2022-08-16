@@ -8,6 +8,7 @@ layout: default
 
 #### University of Oklahoma - Norman, OK
 
+2022 Fall - Precalculus and Trigonometry (2 sections) <br/>
 2022 Summer - Intro to Ordinary Differential Equations <br/>
 2021 Fall - Precalculus and Trigonometry <br/>
 2021 Spring - Calculus for Business, Life, and Social Sciences I <br/>
