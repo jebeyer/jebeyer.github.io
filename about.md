@@ -21,6 +21,6 @@ In my spare time, I enjoy seeking out new music and creating noise using synthes
 <a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="LinkedIn" width="48"/></a>
 <a href="https://www.last.fm/user/blahquaker"><img src="./assets/lastfm-icon-512.png" alt="Last.fm" width="48"/></a>
 <a href="https://soundcloud.com/whistlingkitty"><img src="./assets/soundcloud-icon.png" alt="Soundcloud" width="48"/></a>
-<a href="https://whistlingkitty.bandcamp.com"><img src="./assets/bandcamp-button-bc-circle-whitecolor-512.png" alt="Bandcamp" width="48"/></a>
+<a href="https://whistlingkitty.bandcamp.com"><img src="./assets/bandcamp-button-square-green-512.png" alt="Bandcamp" width="48"/></a>
 <a rel="me" href="https://mathstodon.xyz/@jebeyer"><img src="./assets/mastodon_logo.svg" alt="Mastodon" width="48"/></a>
 
