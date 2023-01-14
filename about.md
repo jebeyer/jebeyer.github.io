@@ -4,14 +4,9 @@ layout: default
 
 ### About Me
 
-I am currently a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/) in Norman. 
-
 [CV](https://drive.google.com/file/d/1GteexAMUcl4p-Qd1MuFYPjpGtCoITJp4/view?usp=sharing)
 
-- MS Mathematics, Pittsburg State University, May 2019
-- BS Mathematics, Evangel University, December 2002
-
-Most of the time between those degrees was spent working as a Geodetic Engineer for a commercial satellite imagery company, traveling, and taking German classes in Hamburg.
+I am currently a graduate student in [mathematics](http://math.ou.edu/) at the [University of Oklahoma](http://www.ou.edu/) in Norman. Previously, I got an MS in mathematics from Pittsburg State University in Kansas and a BS in mathematics from Evangel University in Springfield, MO. I also worked as a Geodetic Engineer for a commercial satellite imagery company for 10 years.
 
 In my spare time, I enjoy seeking out new music and creating noise using synthesizers and electric guitars. If you're curious, you can hear some of my recordings at [bandcamp](https://whistlingkitty.bandcamp.com) or [soundcloud](https://soundcloud.com/whistlingkitty).
 
