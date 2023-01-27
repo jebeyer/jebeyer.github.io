@@ -4,6 +4,8 @@ date: 2023-01-27
 title: Conference Listing Links
 ---
 
+Some links to sites that aggregate conference listings.
+
 #### General Conference Listings:
 * [AMS Calendar](https://www.ams.org/meetings/calendar/mathcal)
 * [Math Meetings](https://mathmeetings.net/)
