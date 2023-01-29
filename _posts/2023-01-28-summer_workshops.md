@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2023-01-27
+date: 2023-01-28
 title: 2023 Summer Workshops
 excerpt_separator: <!--more-->
 ---
