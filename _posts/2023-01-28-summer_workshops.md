@@ -34,6 +34,7 @@ My attempt at aggregating upcoming 2023 summer schools and workshops.
 #### Institutional links:
 * [MSRI Summer Graduate Schools](https://www.msri.org/web/msri/scientific/workshops/summer-graduate-school)
 * [London Mathematical Society](https://www.lms.ac.uk/events/lms-research-schools)
+* [ICMS](https://www.icms.org.uk/workshops) (Edinburgh, Scotland)
 * [ICERM](https://icerm.brown.edu/programs/) (Providence, Rhode Island)
 * [Fields Institute](http://www.fields.utoronto.ca/activities/workshops) (Toronto, Ontario)
 * [CRM](https://www.crmath.ca/en/activities/schools/) (Montreal, Quebec)
