@@ -20,6 +20,8 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 * May 29-June 1, Urbana/Champaign, IL: [Algebraic Methods in Combinatorics](https://sites.google.com/view/uiucsummerschools/summer-school-in-algebraic-methods-in-combinatorics)
 * May 30-June 2, Leiden, Netherlands: [An Expedition into Arithmetic Geometry](https://www.lorentzcenter.nl/an-expedition-into-arithmetic-geometry.html)
 
+---
+
 #### June 2023:
 * June 12-30, Catania, Italy: [Pragmatic](https://www.dmi.unict.it/pragmatic/docs/Pragmatic2023-1Ann.html) - Cohomology and Frobenius
 * June 25-July 1, Koper, Slovenia: [Summer School in Discrete Mathematics](https://conferences.famnit.upr.si/event/29/)
