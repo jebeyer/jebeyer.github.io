@@ -39,6 +39,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 #### August 2023:
 * August 2-4, Bath, UK (LMS): [Geometric and Categorical Representation Theory](https://sites.google.com/view/geometric-and-categorical-lms/home)
 * August 7-11, Ann Arbor, Michigan: [Stacks Project Workshop](https://stacks.github.io/)
+* August 13-18, Nordfjordeid, Norway: [Higher Structures in Algebra and Geometry](https://wiki.math.ntnu.no/nordfjordeid2023/start?redirect=1)
 
 ---
 
