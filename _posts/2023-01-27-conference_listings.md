@@ -26,12 +26,17 @@ Some links to sites that aggregate conference listings.
 ---
 
 #### Institutional links:
-* [MSRI Summer Graduate Schools](https://www.msri.org/web/msri/scientific/workshops/summer-graduate-school)
-* [London Mathematical Society](https://www.lms.ac.uk/events/lms-research-schools)
-* [ICMS](https://www.icms.org.uk/workshops) (Edinburgh, Scotland)
-* [ICERM](https://icerm.brown.edu/programs/) (Providence, Rhode Island)
+* [SLMath/MSRI](https://www.slmath.org/workshops) (Berkeley, California)
+* [AIM](https://aimath.org/workshops/upcoming/) (Pasadena, California)
 * [Fields Institute](http://www.fields.utoronto.ca/activities/workshops) (Toronto, Ontario)
+* [SCGP](https://scgp.stonybrook.edu/science/workshops) (Stony Brook, New York)
+* [ICERM](https://icerm.brown.edu/programs/) (Providence, Rhode Island)
+* [IHES](https://www.ihes.fr/en/events/#conferences) (Bures-sur-Yvette, France)
+* [LMS](https://www.lms.ac.uk/events/lms-research-schools) (London, England)
+* [ICTP](https://www.ictp.it/home/scientific-calendar?s%5B5%5D=5&tt=) (Trieste, Italy)
+* [ICMS](https://www.icms.org.uk/workshops) (Edinburgh, Scotland)
 * [CRM](https://www.crmath.ca/en/activities/schools/) (Montreal, Quebec)
 * [ICMAT](https://www.icmat.es/events/workshops/) (Madrid, Spain)
-* [ICTP](https://www.ictp.it/home/scientific-calendar?s%5B5%5D=5&tt=) (Trieste, Italy)
 * [RIMS](https://www.kurims.kyoto-u.ac.jp/kyoten/en/workshop.html) (Kyoto, Japan)
+* [IHP](https://www.ihp.fr/en/events) (Paris, France)
+* [BRMC](https://brinmrc.umd.edu/) (College Park, Maryland)
