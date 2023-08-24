@@ -32,6 +32,8 @@ Some links to sites that aggregate conference listings.
 * [SCGP](https://scgp.stonybrook.edu/science/workshops) (Stony Brook, New York)
 * [ICERM](https://icerm.brown.edu/programs/) (Providence, Rhode Island)
 * [IHES](https://www.ihes.fr/en/events/#conferences) (Bures-sur-Yvette, France)
+* [BIRS](https://www.birs.ca/programs) (Canada, Mexico, etc.)
+* [MFO](https://www.mfo.de/) (Oberwolfach, Germany)
 * [LMS](https://www.lms.ac.uk/events/lms-research-schools) (London, England)
 * [ICTP](https://www.ictp.it/home/scientific-calendar?s%5B5%5D=5&tt=) (Trieste, Italy)
 * [ICMS](https://www.icms.org.uk/workshops) (Edinburgh, Scotland)
