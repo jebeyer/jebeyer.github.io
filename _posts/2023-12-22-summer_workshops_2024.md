@@ -10,6 +10,9 @@ My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2
 
 Disclaimer: I'm not adding a workshop to the list if registrations are already closed, but I'm also not removing them after registrations close. Also, I take no responsibility if any of the information here is incorrect.
 
+#### May 2024:
+* May 13-17, Ann Arbor, Michigan : [Singularities in Ann Arbor](https://sites.google.com/view/singularitiesinaa/home)
+
 #### June 2024:
 * June 9-15, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Algebraic Combinatorics
 * June 30-July 6, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Homotopical Combinatorics
@@ -17,7 +20,11 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 ---
 
 #### July 2024:
+* July 1-19, Stony Brook, New York : [2nd Simons Math Summer Workshop](https://scgp.stonybrook.edu/archives/41260) - Moduli
 * July 7-27, Park City, Utah: [PCMI Graduate Summer School](https://www.ias.edu/pcmi/programs/pcmi-2024-graduate-summer-school) - Motivic Homotopy Theory
+* July 8-12, York, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - New directions in combinatorial representation theory and diagrammatic categorification
+* July 22-26, Essex, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - AGGITATE
+* July 31-August 9, Shanghai, China: [ICRA 21](https://icra21.sjtu.edu.cn/) - International Conference on Representations of Algebras
 
 ---
 
@@ -26,7 +33,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 ---
 
 #### Institutional links:
-* [MSRI Summer Graduate Schools](https://www.msri.org/web/msri/scientific/workshops/summer-graduate-school)
+* [SLMath Summer Graduate Schools](https://www.slmath.org/summer-schools)
 * [London Mathematical Society](https://www.lms.ac.uk/events/lms-research-schools)
 * [ICMS](https://www.icms.org.uk/workshops) (Edinburgh, Scotland)
 * [ICERM](https://icerm.brown.edu/programs/) (Providence, Rhode Island)
