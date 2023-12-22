@@ -15,6 +15,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 
 #### June 2024:
 * June 9-15, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Algebraic Combinatorics
+* June 10-14, Los Angeles, California : [LAWRGE](https://sites.google.com/view/lawrge2024/) - Relative Langlands Duality
 * June 30-July 6, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Homotopical Combinatorics
 
 ---
@@ -25,10 +26,6 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 * July 8-12, York, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - New directions in combinatorial representation theory and diagrammatic categorification
 * July 22-26, Essex, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - AGGITATE
 * July 31-August 9, Shanghai, China: [ICRA 21](https://icra21.sjtu.edu.cn/) - International Conference on Representations of Algebras
-
----
-
-#### August 2024:
 
 ---
 
