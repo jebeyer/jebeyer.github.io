@@ -13,6 +13,8 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 #### May 2024:
 * May 13-17, Ann Arbor, Michigan : [Singularities in Ann Arbor](https://sites.google.com/view/singularitiesinaa/home)
 
+---
+
 #### June 2024:
 * June 9-15, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Algebraic Combinatorics
 * June 10-14, Los Angeles, California : [LAWRGE](https://sites.google.com/view/lawrge2024/) - Relative Langlands Duality
