@@ -5,10 +5,15 @@ title: 2024 Summer Workshops
 excerpt_separator: <!--more-->
 ---
 
-My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2023-12-22)
+My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2024-01-10)
 <!--more-->
 
 Disclaimer: I'm not adding a workshop to the list if registrations are already closed, but I'm also not removing them after registrations close. Also, I take no responsibility if any of the information here is incorrect.
+
+#### April 2024:
+* April 13-14, Kalamazoo, Michigan : [Lake Michigan Workshop on Combinatorics and Graph Theory](https://sites.google.com/wmich.edu/dudek/9th-lake-michigan-workshop)
+
+---
 
 #### May 2024:
 * May 13-17, Ann Arbor, Michigan : [Singularities in Ann Arbor](https://sites.google.com/view/singularitiesinaa/home)
@@ -23,6 +28,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 ---
 
 #### July 2024:
+* July 1-5, Prague, CZ : [Czech Summer School on Discrete Mathematics](https://www.mff.cuni.cz/en/iuuk/events/czech-summer-school-on-discrete-mathematics)
 * July 1-19, Stony Brook, New York : [2nd Simons Math Summer Workshop](https://scgp.stonybrook.edu/archives/41260) - Moduli
 * July 7-27, Park City, Utah: [PCMI Graduate Summer School](https://www.ias.edu/pcmi/programs/pcmi-2024-graduate-summer-school) - Motivic Homotopy Theory
 * July 8-12, York, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - New directions in combinatorial representation theory and diagrammatic categorification
