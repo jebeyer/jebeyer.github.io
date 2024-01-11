@@ -5,7 +5,7 @@ title: 2024 Summer Workshops
 excerpt_separator: <!--more-->
 ---
 
-My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2024-01-10)
+My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2024-01-11)
 <!--more-->
 
 Disclaimer: I'm not adding a workshop to the list if registrations are already closed, but I'm also not removing them after registrations close. Also, I take no responsibility if any of the information here is incorrect.
@@ -32,7 +32,8 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 * July 1-19, Stony Brook, New York : [2nd Simons Math Summer Workshop](https://scgp.stonybrook.edu/archives/41260) - Moduli
 * July 7-27, Park City, Utah: [PCMI Graduate Summer School](https://www.ias.edu/pcmi/programs/pcmi-2024-graduate-summer-school) - Motivic Homotopy Theory
 * July 8-12, York, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - New directions in combinatorial representation theory and diagrammatic categorification
-* July 22-26, Essex, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - AGGITATE
+* July 22-26, Euguene, Oregon : [WARTHOG](https://pages.uoregon.edu/belias/WARTHOG/CohVsCon/) - Coherent-constructible equivalences in local Geometric Langlands and Representation Theory
+* July 22-26, Essex, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - AGGITatE
 * July 31-August 9, Shanghai, China: [ICRA 21](https://icra21.sjtu.edu.cn/) - International Conference on Representations of Algebras
 
 ---
