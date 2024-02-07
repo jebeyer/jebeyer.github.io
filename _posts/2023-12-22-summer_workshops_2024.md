@@ -17,6 +17,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 
 #### May 2024:
 * May 13-17, Ann Arbor, Michigan : [Singularities in Ann Arbor](https://sites.google.com/view/singularitiesinaa/home)
+* May 21-24, Versailles, France : [CHARMS](https://charms-summer-school.github.io/) - Categorical and geometric methods in the representation theory of algebras
 
 ---
 
@@ -36,6 +37,11 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 * July 22-26, Euguene, Oregon : [WARTHOG](https://pages.uoregon.edu/belias/WARTHOG/CohVsCon/) - Coherent-constructible equivalences in local Geometric Langlands and Representation Theory
 * July 22-26, Essex, UK : [LMS](https://www.lms.ac.uk/events/lms-research-schools) - AGGITatE
 * July 31-August 9, Shanghai, China: [ICRA 21](https://icra21.sjtu.edu.cn/) - International Conference on Representations of Algebras
+
+---
+
+### November 2024:
+* November 18-30, Okinawa, Japan : [Autumn School & Conference](https://sites.google.com/view/autumn-oist-school-conference/home) - New developments in representation theory of algebras
 
 ---
 
