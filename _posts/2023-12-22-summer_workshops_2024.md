@@ -5,7 +5,7 @@ title: 2024 Summer Workshops
 excerpt_separator: <!--more-->
 ---
 
-My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2024-01-11)
+My attempt at aggregating upcoming 2024 summer schools and workshops. (Updated 2024-02-07)
 <!--more-->
 
 Disclaimer: I'm not adding a workshop to the list if registrations are already closed, but I'm also not removing them after registrations close. Also, I take no responsibility if any of the information here is incorrect.
@@ -23,6 +23,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 #### June 2024:
 * June 9-15, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Algebraic Combinatorics
 * June 10-14, Los Angeles, California : [LAWRGE](https://sites.google.com/view/lawrge2024/) - Relative Langlands Duality
+* June 17-21, Storrs, Connecticut: [Cluster Algebras Summer School 2024](https://egunawan.github.io/cass24/index.html)
 * June 30-July 6, Java Center, New York: [AMS MRC](https://www.ams.org/programs/research-communities/mrc-24) - Homotopical Combinatorics
 
 ---
