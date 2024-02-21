@@ -40,7 +40,7 @@ Disclaimer: I'm not adding a workshop to the list if registrations are already c
 
 ---
 
-### November 2024:
+#### November 2024:
 * November 18-30, Okinawa, Japan : [Autumn School & Conference](https://sites.google.com/view/autumn-oist-school-conference/home) - New developments in representation theory of algebras
 
 ---
