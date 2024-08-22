@@ -236,7 +236,7 @@ class dotGroup {
 		let i = 0;
 		let j = 1;
 		let	k = 2;
-		while (i<=3) {
+		while (i<7) {
 			indexR = closest[i] %3;
 			indexL = (closest[i] - indexR)/3;
 			pt1.x = (dots[this.left[indexL]].position.x + dots[this.right[indexR]].position.x)/2;
@@ -244,7 +244,7 @@ class dotGroup {
 			pt1.z = (dots[this.left[indexL]].position.z + dots[this.right[indexR]].position.z)/2;
 			
 			j = i+1;
-			while (j<= i+2 && j<5) {
+			while (j<8) {
 				indexR = closest[j] %3;
 				indexL = (closest[j] - indexR)/3;
 				pt2.x = (dots[this.left[indexL]].position.x + dots[this.right[indexR]].position.x)/2;
@@ -252,7 +252,7 @@ class dotGroup {
 				pt2.z = (dots[this.left[indexL]].position.z + dots[this.right[indexR]].position.z)/2;
 
 				k = j+1;
-				while (k<= i+3 && k<6) {
+				while (k<9) {
 					indexR = closest[k] %3;
 					indexL = (closest[k] - indexR)/3;
 					pt3.x = (dots[this.left[indexL]].position.x + dots[this.right[indexR]].position.x)/2;
