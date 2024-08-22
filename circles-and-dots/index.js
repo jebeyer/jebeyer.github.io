@@ -47,6 +47,8 @@ let circles = [];
 let circleGeoms = [];
 let dotGroups = [];
 
+let circleColor = 0x202020;
+
 const gui = new GUI();
 
 const setScene = () => {
@@ -364,10 +366,9 @@ const setCircles2 = () => {
 
 			let radius3 = dotGroups[i].radius3.length();
 			let ctr3 = dotGroups[i].center3.clone();
-			//ctr3.setLength(20.0*Math.sin(radius3/20.0));
 
 			torusGeom = new THREE.TorusGeometry(radius3,0.2,12,60);
-			torusMat = new THREE.MeshBasicMaterial({ color: 0x202020 });
+			torusMat = new THREE.MeshBasicMaterial({ color: circleColor });
 			tmpCircle = new circle(torusGeom, torusMat);
 			tmpCircle.center3.copy(dotGroups[i].center3);
 			tmpCircle.radvec3.copy(dotGroups[i].radius3);
@@ -427,7 +428,7 @@ const updateCircles2 = () => {
 				let ctr3 = dotGroups[i].center3.clone();
 
 				torusGeom = new THREE.TorusGeometry(radius3,0.2,12,60);
-				torusMat = new THREE.MeshBasicMaterial({ color: 0x202020 });
+				torusMat = new THREE.MeshBasicMaterial({ color: circleColor });
 				tmpCircle = new circle(torusGeom, torusMat);
 				tmpCircle.center3.copy(dotGroups[i].center3);
 				tmpCircle.radvec3.copy(dotGroups[i].radius3);
@@ -459,14 +460,30 @@ const updateCircles2 = () => {
 const guiObj = {
 	autoRotate: false,
 	animateDots: false,
+	dotSpeed: 10,
 	sphereColor: 0x9b66e6,
 	sphereOpacity: 0.9,
-	dotColor: 0x112211
+	dotColor: 0x112211,
+	circleColor: 0x202020
 }
 gui.add(guiObj, 'autoRotate').onChange( value => {
 	controls.autoRotate = value;
 } );
-//gui.add(guiObj, 'animateDots');
+
+const dotFolder = gui.addFolder( 'dotAnimation' );
+dotFolder.add(guiObj, 'animateDots');
+let angle = 0.0001 * guiObj.dotSpeed;
+let cosAngle = Math.cos(angle);
+let sinAngle = Math.sin(angle);
+let Rx = new THREE.Matrix3(1, 0, 0, 0, cosAngle, -sinAngle, 0, sinAngle, cosAngle); 
+let Ry = new THREE.Matrix3(cosAngle, 0, sinAngle, 0, 1, 0, -sinAngle, 0, cosAngle);
+let Rz = new THREE.Matrix3(cosAngle, -sinAngle, 0, sinAngle, cosAngle, 0, 0, 0, 1);
+dotFolder.add(guiObj, 'dotSpeed', 1, 25).onChange (value => {
+	angle = 0.0001 * value;
+	Rx = new THREE.Matrix3(1, 0, 0, 0, cosAngle, -sinAngle, 0, sinAngle, cosAngle); 
+	Ry = new THREE.Matrix3(cosAngle, 0, sinAngle, 0, 1, 0, -sinAngle, 0, cosAngle);
+	Rz = new THREE.Matrix3(cosAngle, -sinAngle, 0, sinAngle, cosAngle, 0, 0, 0, 1);
+} );
 const colorFolder = gui.addFolder( 'colors' );
 colorFolder.addColor(guiObj, 'sphereColor').onChange( value => {
 	baseMesh.material.color.set(value);
@@ -479,6 +496,30 @@ colorFolder.addColor(guiObj, 'dotColor').onChange( value => {
 		dots[j].material.color.set(value);
 	}
 } );
+colorFolder.addColor(guiObj, 'circleColor').onChange( value => {
+	circleColor = value;
+	for (let i=0; i<circles.length; i++) {
+		circles[i].material.color.set(value);
+	}
+} );
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    // Update the position of the dots
+	if(guiObj.animateDots) {
+		dots[0].position.applyMatrix3(Ry);
+		dots[1].position.applyMatrix3(Rx);
+		dots[2].position.applyMatrix3(Rz);
+		dots[3].position.applyMatrix3(Ry);
+		dots[4].position.applyMatrix3(Rx);
+		dots[5].position.applyMatrix3(Rz);
+		
+		updateCircles2();
+	}
+
+    renderer.render(scene1, camera1);
+}
 
 const resize = () => {
 
@@ -560,7 +601,7 @@ const render = () => {
 	renderer.clear();
 	renderer.setViewport( 0, 0, window.innerWidth, window.innerHeight );
 	renderer.render(scene1, camera1);
-	requestAnimationFrame(render.bind(this))
+	requestAnimationFrame(render.bind(this));
 
 	updateDotPositionTable();
 	circlesOutput.textContent = circles.length;
@@ -568,4 +609,5 @@ const render = () => {
 }
 
 setScene();
+animate();
 
