@@ -6,7 +6,8 @@ import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 const container = document.querySelector('.container');
 const canvas    = document.querySelector('.canvas');
 
-const circlesOutput = document.getElementById("numCirclesOutput");
+const circlesOutput = document.getElementById('numCirclesOutput');
+const tableContainer = document.querySelector('#bottom-right-table');
 const table1 = document.querySelectorAll('#bottom-right-table td');
 window.onload = function() {
 
@@ -46,8 +47,13 @@ let dots = [];
 let circles = [];
 let circleGeoms = [];
 let dotGroups = [];
+let vertices = [];
+let vertexPairs = [];
+let edges = [];
 
 let circleColor = 0x202020;
+let sphGraphColor = 0x4062ec;
+let vertexRadius = 24.0;
 
 const gui = new GUI();
 
@@ -76,6 +82,10 @@ const setScene = () => {
 
 	const light1 = new THREE.AmbientLight( 0xffffbb ); // soft white light
 	scene1.add( light1 );
+	
+	//const light2 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+	const light2 = new THREE.HemisphereLight( 0x999999, 0x333333, 1);
+	scene1.add( light2 );
 
 	raycaster         = new THREE.Raycaster();
 	mouse             = new THREE.Vector2();
@@ -89,6 +99,7 @@ const setScene = () => {
 	setDots();
 	setupDgList();
 	setCircles2();
+	setGraph();
 	resize();
 	listenTo();
 	render();
@@ -122,6 +133,7 @@ const setControls = () => {
 		event.object.position.copy(tmp3);
 		
 		updateCircles2();
+		updateGraph();
 
 	} );
 	dragcontrols.addEventListener( 'dragend', function ( event ) {
@@ -172,6 +184,131 @@ class circle extends THREE.Mesh {
 		this.dg = 11;
     }
 
+}
+
+class vertex extends THREE.Mesh {
+
+    constructor(geom, mat) {
+        super(geom, mat);
+		super.name = "vertex";
+		this.visible = true;
+		this.filled = true;
+		this.vp = 99;
+		this.opacity = 0.0;
+    }
+
+}
+
+class vertexPair {
+	
+	constructor(index1, index2) {
+		this.v1 = index1;
+		this.v2 = index2;
+		this.planeDots = [9,9,9];
+		this.neighborGroups = [];
+		this.visible = false;
+	}
+	isPlaneDot(index) {
+		for (let j=0; j<3; j++) {
+			if (index == this.planeDots[j]){
+				return true;
+			}
+		}
+		return false;
+	}
+	setVertexColors(plane) {
+		if (plane.isPlane) {
+				
+			const vertDists = [];
+			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v1].position)));
+			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v2].position)));
+				
+			let v1Side = 0;
+			let v2Side = 0;
+			let tmpDist;
+			for (let i=0; i<6; i++) {
+				if (!this.isPlaneDot(i)) {
+					tmpDist = Math.sign(plane.distanceToPoint(dots[i].position));
+					if (tmpDist == vertDists[0]) {
+						v1Side++;
+					} else if (tmpDist == vertDists[1]) {
+						v2Side++;
+					}
+				}
+			}
+			if (v1Side == 1 && v2Side == 2) {
+				vertices[this.v1].visible = true;
+				vertices[this.v1].filled = false;
+				vertices[this.v2].visible = true;
+				vertices[this.v2].filled = true;
+			} else if (v1Side == 2 && v2Side == 1) {
+				vertices[this.v1].visible = true;
+				vertices[this.v1].filled = true;
+				vertices[this.v2].visible = true;
+				vertices[this.v2].filled = false;
+			} else {
+				vertices[this.v1].visible = false;
+				vertices[this.v2].visible = false;
+			}
+
+			this.setDisplay(this.visible);
+			
+			return true;
+		}
+		return false;
+	}
+	setDisplay(value) {
+		this.visible = value;
+		
+		if (this.visible) {
+			if (vertices[this.v1].visible) {
+				if (vertices[this.v1].filled) {
+					vertices[this.v1].material.opacity = 1.0;
+				} else {
+					vertices[this.v1].material.opacity = 0.4;
+				} 
+			} else {
+				vertices[this.v1].material.opacity = 0.0;
+			}
+			
+			if (vertices[this.v2].visible) {
+				if (vertices[this.v2].filled) {
+					vertices[this.v2].material.opacity = 1.0;
+				} else {
+					vertices[this.v2].material.opacity = 0.4;
+				}
+			} else {
+				vertices[this.v2].material.opacity = 0.0;
+			}
+		} else {
+			vertices[this.v1].material.opacity = 0.0;
+			vertices[this.v2].material.opacity = 0.0;
+		}
+		return true;
+	}
+	isNeighbor(vp) {
+		for (let j=0; j<this.neighborGroups.length; j++){
+			if(vp == this.neighborGroups[j]) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+}
+
+class edge extends THREE.Line {
+	
+	constructor (v1, v2) {
+		const material = new THREE.LineBasicMaterial( { color: sphGraphColor } );
+		const points = [vertices[v1].position, vertices[v2].position];
+		const geometry = new THREE.BufferGeometry().setFromPoints( points );
+		super(geometry, material);
+
+		this.start = v1;
+		this.end = v2;
+		this.visible = false;
+	}
 }
 
 class dotGroup {
@@ -457,20 +594,286 @@ const updateCircles2 = () => {
 
 }
 
+const setVertices = () => {
+	
+	let i=0;
+	let j,k;
+	while (i<4) {
+
+		j = i+1;
+		while (j<5) {
+
+			k = j+1;
+			while (k<6) {
+
+				let currPlane = new THREE.Plane();
+				currPlane.setFromCoplanarPoints(dots[i].position, dots[j].position, dots[k].position);
+				
+			    let tmpVert;
+				let tmpPos1 = new THREE.Vector3(0.0, 0.0, 0.0);
+				let tmpPos2 = new THREE.Vector3(0.0, 0.0, 0.0);
+				let normalVec = currPlane.normal.clone();
+				normalVec.normalize();
+				tmpPos1.addScaledVector(normalVec, vertexRadius);
+				tmpPos2.addScaledVector(normalVec, -vertexRadius);
+				
+				const vertGeom = new THREE.SphereGeometry(1.0, 12, 12);
+				const vertMat = new THREE.MeshPhongMaterial({color: sphGraphColor, opacity: 0.0});
+				vertMat.transparent = true;
+
+				tmpVert = new vertex(vertGeom, vertMat);
+				vertices.push(tmpVert);
+				tmpVert.position.copy(tmpPos1);
+				scene1.add(tmpVert);
+
+				tmpVert = new vertex(vertGeom, vertMat);
+				vertices.push(tmpVert);
+				tmpVert.position.copy(tmpPos2);
+				scene1.add(tmpVert);
+
+				let tmpVP = new vertexPair(vertices.length -2, vertices.length -1);
+				tmpVP.planeDots[0] = i;
+				tmpVP.planeDots[1] = j;
+				tmpVP.planeDots[2] = k;
+				vertices[tmpVP.v1].vp = vertexPairs.length;
+				vertices[tmpVP.v2].vp = vertexPairs.length;
+				tmpVP.setVertexColors(currPlane);
+				vertexPairs.push(tmpVP);
+				
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
+	
+	i=0;
+	let jMax = vertexPairs.length;
+	let iMax = jMax - 1;
+	let neighbor = false;
+	while (i < iMax) {
+		j = i+1;
+		while (j < jMax) {
+			neighbor = false;
+			if (vertexPairs[i].planeDots[0] == vertexPairs[j].planeDots[0]) {
+				if (vertexPairs[i].planeDots[1] == vertexPairs[j].planeDots[1] || vertexPairs[i].planeDots[1] == vertexPairs[j].planeDots[2] || vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[1] || vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[2]) {
+					neighbor = true;
+				}
+			} else if (vertexPairs[i].planeDots[0] == vertexPairs[j].planeDots[1]) {
+				if (vertexPairs[i].planeDots[1] == vertexPairs[j].planeDots[2] || vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[2]) {
+					neighbor = true;
+				}
+			} else if (vertexPairs[i].planeDots[1] == vertexPairs[j].planeDots[0]) {
+				if (vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[1] || vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[2]) {
+					neighbor = true;
+				}
+			} else if (vertexPairs[i].planeDots[1] == vertexPairs[j].planeDots[1]) {
+				if (vertexPairs[i].planeDots[2] == vertexPairs[j].planeDots[2]) {
+					neighbor = true;
+				}
+			}
+			if (neighbor) {
+				vertexPairs[i].neighborGroups.push(j);
+				vertexPairs[j].neighborGroups.push(i);
+			}
+			j++;
+		}
+		i++;
+	}
+	
+}
+
+const setEdgeVisibility = () => {
+	let d1, d2;
+	let vCount = 0;
+	for (let i=0; i<edges.length; i++) {
+		
+		edges[i].visible = false;
+		
+		const vpStart = vertices[edges[i].start].vp;
+		const vpEnd = vertices[edges[i].end].vp;
+		if (vertexPairs[vpStart].isNeighbor(vpEnd)) {
+			if (vertexPairs[vpStart].visible && vertexPairs[vpEnd].visible) {
+				if (vertices[edges[i].start].visible && vertices[edges[i].end].visible) {
+					
+					let shared1, shared2, startDot3, endDot3;
+					if (vertexPairs[vpStart].planeDots[0] == vertexPairs[vpEnd].planeDots[0]) {
+						shared1 = vertexPairs[vpStart].planeDots[0];
+						if (vertexPairs[vpStart].planeDots[1] == vertexPairs[vpEnd].planeDots[1]) {
+							shared2 = vertexPairs[vpStart].planeDots[1];
+							startDot3 = vertexPairs[vpStart].planeDots[2];
+							endDot3 = vertexPairs[vpEnd].planeDots[2];
+						} else if (vertexPairs[vpStart].planeDots[1] == vertexPairs[vpEnd].planeDots[2]) {
+							shared2 = vertexPairs[vpStart].planeDots[1];
+							startDot3 = vertexPairs[vpStart].planeDots[2];
+							endDot3 = vertexPairs[vpEnd].planeDots[1];
+						} else if (vertexPairs[vpStart].planeDots[2] == vertexPairs[vpEnd].planeDots[1]) {
+							shared2 = vertexPairs[vpStart].planeDots[2];
+							startDot3 = vertexPairs[vpStart].planeDots[1];
+							endDot3 = vertexPairs[vpEnd].planeDots[2];
+						} else {
+							shared2 = vertexPairs[vpStart].planeDots[2];
+							startDot3 = vertexPairs[vpStart].planeDots[1];
+							endDot3 = vertexPairs[vpEnd].planeDots[1];
+						}
+					} else if (vertexPairs[vpStart].planeDots[0] == vertexPairs[vpEnd].planeDots[1]) {
+						shared1 = vertexPairs[vpEnd].planeDots[1];
+						shared2 = vertexPairs[vpEnd].planeDots[2];
+						endDot3 = vertexPairs[vpEnd].planeDots[0];
+						if (vertexPairs[vpStart].planeDots[1] == vertexPairs[vpEnd].planeDots[2]) {
+							startDot3 = vertexPairs[vpStart].planeDots[2];
+						} else {
+							startDot3 = vertexPairs[vpStart].planeDots[1];
+						}
+					} else if (vertexPairs[vpStart].planeDots[1] == vertexPairs[vpEnd].planeDots[1]) {
+						shared1 = vertexPairs[vpStart].planeDots[1];
+						shared2 = vertexPairs[vpStart].planeDots[2];
+						startDot3 = vertexPairs[vpStart].planeDots[0];
+						endDot3 = vertexPairs[vpEnd].planeDots[0];
+					} else if (vertexPairs[vpStart].planeDots[1] == vertexPairs[vpEnd].planeDots[0]) {
+						shared1 = vertexPairs[vpStart].planeDots[1];
+						shared2 = vertexPairs[vpStart].planeDots[2];
+						startDot3 = vertexPairs[vpStart].planeDots[0];
+						if (vertexPairs[vpStart].planeDots[2] == vertexPairs[vpEnd].planeDots[1]) {
+							endDot3 = vertexPairs[vpEnd].planeDots[2];
+						} else {
+							endDot3 = vertexPairs[vpEnd].planeDots[1];
+						}
+					}
+					
+					let zeroVec = new THREE.Vector3(0.0,0.0,0.0);
+
+					let currPlane = new THREE.Plane();
+					currPlane.setFromCoplanarPoints(dots[shared1].position, dots[shared2].position, zeroVec);
+
+					let d1 = Math.sign(currPlane.distanceToPoint(dots[startDot3].position));
+					let d2 = Math.sign(currPlane.distanceToPoint(dots[endDot3].position));
+					if (d1 != d2) {
+						d1 = Math.sign(currPlane.distanceToPoint(vertices[vpStart].position));
+						d2 = Math.sign(currPlane.distanceToPoint(vertices[vpEnd].position));
+						if (d1 != d2) {
+							edges[i].visible = true;
+							vCount++;
+						}
+					}
+				}
+			}
+		}
+	}
+	//console.log(vCount, "edges");
+}
+
+const setEdges = () => {
+	
+	let i, j, iMax, jMax, tmpEdge;
+	i = 0;
+	jMax = vertexPairs.length;
+	iMax = jMax - 1;
+	while (i < iMax) {
+		j = i+1;
+		while (j < jMax) {
+			if (vertexPairs[i].isNeighbor(j)) {
+				tmpEdge = new edge(vertexPairs[i].v1, vertexPairs[j].v1);
+				edges.push(tmpEdge);
+				scene1.add(tmpEdge);
+
+				tmpEdge = new edge(vertexPairs[i].v1, vertexPairs[j].v2);
+				edges.push(tmpEdge);
+				scene1.add(tmpEdge);
+
+				tmpEdge = new edge(vertexPairs[i].v2, vertexPairs[j].v1);
+				edges.push(tmpEdge);
+				scene1.add(tmpEdge);
+
+				tmpEdge = new edge(vertexPairs[i].v2, vertexPairs[j].v2);
+				edges.push(tmpEdge);
+				scene1.add(tmpEdge);
+			}
+			j++;
+		}
+		i++;
+	}
+	//console.log(edges.length);
+}
+
+const setGraph = () => {
+	
+	setVertices();
+	setEdges();
+	
+}
+
+const updateVertices = () => {
+	
+	for (let i=0; i<vertexPairs.length; i++) {
+		
+		let dot1 = vertexPairs[i].planeDots[0];
+		let dot2 = vertexPairs[i].planeDots[1];
+		let dot3 = vertexPairs[i].planeDots[2];
+
+		let currPlane = new THREE.Plane();
+		currPlane.setFromCoplanarPoints(dots[dot1].position, dots[dot2].position, dots[dot3].position);
+				
+	    let tmpVert;
+		let tmpPos1 = new THREE.Vector3(0.0, 0.0, 0.0);
+		let tmpPos2 = new THREE.Vector3(0.0, 0.0, 0.0);
+		let normalVec = currPlane.normal.clone();
+		normalVec.normalize();
+		tmpPos1.addScaledVector(normalVec, vertexRadius);
+		tmpPos2.addScaledVector(normalVec, -vertexRadius);
+				
+		vertices[vertexPairs[i].v1].position.copy(tmpPos1);
+		vertices[vertexPairs[i].v2].position.copy(tmpPos2);
+
+		vertexPairs[i].setVertexColors(currPlane);
+				
+	}
+	
+}
+
+const updateEdges = () => {
+	
+	for (let i=0; i<edges.length; i++) {
+		let endPts = [];
+		endPts.push(vertices[edges[i].start].position);
+		endPts.push(vertices[edges[i].end].position);
+		edges[i].geometry.setFromPoints(endPts);
+	}
+	
+	setEdgeVisibility();
+	
+}
+
+const updateGraph = () => {
+	
+	updateVertices();
+	updateEdges();
+	
+}
+	
+
+
 const guiObj = {
 	autoRotate: false,
+	displayCoordinates: true,
 	animateDots: false,
 	dotSpeed: 10,
 	sphereColor: 0x9b66e6,
 	sphereOpacity: 0.9,
 	dotColor: 0x112211,
-	circleColor: 0x202020
+	circleColor: 0x202020,
+	displayGraph: false,
+	graphScale: 1.2,
+	graphColor: 0x4062ec
 }
 gui.add(guiObj, 'autoRotate').onChange( value => {
 	controls.autoRotate = value;
 } );
 
-const dotFolder = gui.addFolder( 'dotAnimation' );
+const dotFolder = gui.addFolder( 'dots' );
+dotFolder.add(guiObj, 'displayCoordinates').onChange( value => {
+	tableContainer.style.display = value ? 'table' : 'none';
+} );
 dotFolder.add(guiObj, 'animateDots');
 let angle = 0.0001 * guiObj.dotSpeed;
 let cosAngle = Math.cos(angle);
@@ -478,13 +881,22 @@ let sinAngle = Math.sin(angle);
 let Rx = new THREE.Matrix3(1, 0, 0, 0, cosAngle, -sinAngle, 0, sinAngle, cosAngle); 
 let Ry = new THREE.Matrix3(cosAngle, 0, sinAngle, 0, 1, 0, -sinAngle, 0, cosAngle);
 let Rz = new THREE.Matrix3(cosAngle, -sinAngle, 0, sinAngle, cosAngle, 0, 0, 0, 1);
+let Rxy = new THREE.Matrix3();
+Rxy.multiplyMatrices(Rx, Ry);
+let Rxz = new THREE.Matrix3();
+Rxz.multiplyMatrices(Rx, Rz);
+let Ryz = new THREE.Matrix3();
+Ryz.multiplyMatrices(Ry, Rz);
 dotFolder.add(guiObj, 'dotSpeed', 1, 25).onChange (value => {
 	angle = 0.0001 * value;
 	cosAngle = Math.cos(angle);
 	sinAngle = Math.sin(angle);
-	Rx = new THREE.Matrix3(1, 0, 0, 0, cosAngle, -sinAngle, 0, sinAngle, cosAngle); 
-	Ry = new THREE.Matrix3(cosAngle, 0, sinAngle, 0, 1, 0, -sinAngle, 0, cosAngle);
-	Rz = new THREE.Matrix3(cosAngle, -sinAngle, 0, sinAngle, cosAngle, 0, 0, 0, 1);
+	Rx.set(1, 0, 0, 0, cosAngle, -sinAngle, 0, sinAngle, cosAngle); 
+	Ry.set(cosAngle, 0, sinAngle, 0, 1, 0, -sinAngle, 0, cosAngle);
+	Rz.set(cosAngle, -sinAngle, 0, sinAngle, cosAngle, 0, 0, 0, 1);
+	Rxy.multiplyMatrices(Rx, Ry);
+	Rxz.multiplyMatrices(Rx, Rz);
+	Ryz.multiplyMatrices(Ry, Rz);
 } );
 const colorFolder = gui.addFolder( 'colors' );
 colorFolder.addColor(guiObj, 'sphereColor').onChange( value => {
@@ -504,6 +916,26 @@ colorFolder.addColor(guiObj, 'circleColor').onChange( value => {
 		circles[i].material.color.set(value);
 	}
 } );
+const graphFolder = gui.addFolder( 'sphebic graph (in development)' );
+graphFolder.add(guiObj, 'displayGraph').onChange( value => {
+	for (let i=0; i<vertexPairs.length; i++) {
+		vertexPairs[i].setDisplay(value);
+	}
+	setEdgeVisibility();
+} );
+graphFolder.add(guiObj, 'graphScale', 0.99, 2.0).onChange( value => {
+	vertexRadius = value * 20.0;
+	updateGraph();
+} );
+graphFolder.addColor(guiObj, 'graphColor').onChange( value => {
+	sphGraphColor = value;
+	for (let i=0; i<vertices.length; i++) {
+		vertices[i].material.color.set(value);
+	}
+	for (let j=0; j<edges.length; j++) {
+		edges[j].material.color.set(value);
+	}
+} );
 
 function animate() {
     requestAnimationFrame(animate);
@@ -513,14 +945,17 @@ function animate() {
 		dots[0].position.applyMatrix3(Ry);
 		dots[1].position.applyMatrix3(Rx);
 		dots[2].position.applyMatrix3(Rz);
-		dots[3].position.applyMatrix3(Ry);
-		dots[4].position.applyMatrix3(Rx);
-		dots[5].position.applyMatrix3(Rz);
+		dots[3].position.applyMatrix3(Ryz);
+		dots[4].position.applyMatrix3(Rxy);
+		dots[5].position.applyMatrix3(Rxz);
 		
 		updateCircles2();
+		updateGraph();
+
+		renderer.render(scene1, camera1);
+
 	}
 
-    renderer.render(scene1, camera1);
 }
 
 const resize = () => {
