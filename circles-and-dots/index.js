@@ -736,7 +736,7 @@ const setEdgeVisibility = () => {
 			}
 		}
 	}
-	console.log(vCount, "edges");
+	//console.log(vCount, "edges");
 }
 
 const setEdges = () => {
