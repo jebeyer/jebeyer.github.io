@@ -922,7 +922,7 @@ graphFolder.add(guiObj, 'displayGraph').onChange( value => {
 	}
 	setEdgeVisibility();
 } );
-graphFolder.add(guiObj, 'graphScale', 1.05, 2.0).onChange( value => {
+graphFolder.add(guiObj, 'graphScale', 1.02, 2.0).onChange( value => {
 	vertexRadius = value * 20.0;
 	updateGraph();
 } );
