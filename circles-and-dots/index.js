@@ -52,7 +52,7 @@ let vertexPairs = [];
 let edges = [];
 
 let circleColor = 0x202020;
-let	sphVertexColor1 = 0xd85ac7;
+let	sphVertexColor1 = 0x5ac3d8;
 let	sphVertexColor2 = 0xffc800;
 let	sphEdgeColor = 0xd85ac7;
 let vertexRadius = 24.0;
@@ -196,7 +196,7 @@ class vertex extends THREE.Mesh {
         super(geom, mat);
 		super.name = "vertex";
 		this.visible = true;
-		this.filled = true;
+		this.black = true;
 		this.vp = 99;
 		this.opacity = 0.0;
     }
@@ -208,19 +208,11 @@ class vertexPair {
 	constructor(index1, index2) {
 		this.v1 = index1;
 		this.v2 = index2;
-		this.planeDots = [9,9,9];
+		this.planeDots = [];
 		this.posDots = [];
 		this.negDots = [];
 		this.neighborGroups = [];
 		this.visible = false;
-	}
-	isPlaneDot(index) {
-		for (let j=0; j<3; j++) {
-			if (index == this.planeDots[j]){
-				return true;
-			}
-		}
-		return false;
 	}
 	setVertexColors(plane) {
 		if (plane.isPlane) {
@@ -236,36 +228,32 @@ class vertexPair {
 			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v1].position)));
 			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v2].position)));
 				
-			let v1Side = 0;
-			let v2Side = 0;
 			let tmpDist;
 			for (let i=0; i<6; i++) {
-				if (!this.isPlaneDot(i)) {
+				if (!this.planeDots.includes(i)) {
 					tmpDist = Math.sign(plane.distanceToPoint(dots[i].position));
 					if (tmpDist == vertDists[0]) {
 						this.posDots.push(i);
-						v1Side++;
 					} else if (tmpDist == vertDists[1]) {
 						this.negDots.push(i);
-						v2Side++;
 					}
 				}
 			}
-			if (v1Side == 1 && v2Side == 2) {
+			if (this.posDots.length == 1 && this.negDots.length == 2) {
 				vertices[this.v1].visible = true;
-				vertices[this.v1].filled = true;
+				vertices[this.v1].black = false;
 				vertices[this.v2].visible = true;
-				vertices[this.v2].filled = false;
-			} else if (v1Side == 2 && v2Side == 1) {
+				vertices[this.v2].black = true;
+			} else if (this.posDots.length == 2 && this.negDots.length == 1) {
 				vertices[this.v1].visible = true;
-				vertices[this.v1].filled = false;
+				vertices[this.v1].black = true;
 				vertices[this.v2].visible = true;
-				vertices[this.v2].filled = true;
+				vertices[this.v2].black = false;
 			} else {
 				vertices[this.v1].visible = false;
 				vertices[this.v2].visible = false;
 			}
-
+			
 			this.setDisplay(this.visible);
 			
 			return true;
@@ -276,29 +264,21 @@ class vertexPair {
 		this.visible = value;
 		
 		if (this.visible) {
-			if (vertices[this.v1].visible) {
-				if (vertices[this.v1].filled) {
-					vertices[this.v1].material.opacity = 1.0;
+			if (vertices[this.v1].visible && vertices[this.v2].visible) {
+				if (vertices[this.v1].black) {
 					vertices[this.v1].material.color.set(sphVertexColor1);
+					vertices[this.v2].material.color.set(sphVertexColor2);
 				} else {
-					vertices[this.v1].material.opacity = 1.0;
+					vertices[this.v2].material.color.set(sphVertexColor1);
 					vertices[this.v1].material.color.set(sphVertexColor2);
 				}
+				vertices[this.v1].material.opacity = 1.0;
+				vertices[this.v2].material.opacity = 1.0;
 			} else {
 				vertices[this.v1].material.opacity = 0.0;
-			}
-			
-			if (vertices[this.v2].visible) {
-				if (vertices[this.v2].filled) {
-					vertices[this.v1].material.opacity = 1.0;
-					vertices[this.v1].material.color.set(sphVertexColor1);
-				} else {
-					vertices[this.v1].material.opacity = 1.0;
-					vertices[this.v1].material.color.set(sphVertexColor2);
-				}
-			} else {
 				vertices[this.v2].material.opacity = 0.0;
 			}
+			
 		} else {
 			vertices[this.v1].material.opacity = 0.0;
 			vertices[this.v2].material.opacity = 0.0;
@@ -306,10 +286,8 @@ class vertexPair {
 		return true;
 	}
 	isNeighbor(vp) {
-		for (let j=0; j<this.neighborGroups.length; j++){
-			if(vp == this.neighborGroups[j]) {
-				return true;
-			}
+		if (this.neighborGroups.includes(vp)) {
+			return true;
 		}
 		return false;
 	}
@@ -319,8 +297,30 @@ class vertexPair {
 class edge extends THREE.Line {
 	
 	constructor (v1, v2) {
+		const curve = new THREE.CatmullRomCurve3([
+			vertices[v1].position,
+			new THREE.Vector3( (vertices[v1].position.x *4 + vertices[v2].position.x)/5, 
+			                   (vertices[v1].position.y *4 + vertices[v2].position.y)/5, 
+							   (vertices[v1].position.z *4 + vertices[v2].position.z)/5 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[v1].position.x *2 + vertices[v2].position.x)/3, 
+			                   (vertices[v1].position.y *2 + vertices[v2].position.y)/3, 
+							   (vertices[v1].position.z *2 + vertices[v2].position.z)/3 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[v1].position.x + vertices[v2].position.x)/2, 
+			                   (vertices[v1].position.y + vertices[v2].position.y)/2, 
+							   (vertices[v1].position.z + vertices[v2].position.z)/2 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[v1].position.x + vertices[v2].position.x *2)/3, 
+			                   (vertices[v1].position.y + vertices[v2].position.y *2)/3, 
+							   (vertices[v1].position.z + vertices[v2].position.z *2)/3 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[v1].position.x + vertices[v2].position.x *4)/5, 
+			                   (vertices[v1].position.y + vertices[v2].position.y *4)/5, 
+							   (vertices[v1].position.z + vertices[v2].position.z *4)/5 ).setLength(vertexRadius),
+			vertices[v2].position],
+			false,
+			"chordal"
+		);
+		const points = curve.getPoints( 50 );
+		
 		const material = new THREE.LineBasicMaterial( { color: sphEdgeColor } );
-		const points = [vertices[v1].position, vertices[v2].position];
 		const geometry = new THREE.BufferGeometry().setFromPoints( points );
 		super(geometry, material);
 
@@ -483,8 +483,8 @@ const setDots = () => {
 		tmpDot = new dot(dotGeom, dotMat);
 		dots.push(tmpDot);
 		
-		tmpDot.position.x = Math.random() * 2 - 1;
-		tmpDot.position.y = Math.random() * 2 - 1;
+		tmpDot.position.x = Math.sin(Math.random() * 20);
+		tmpDot.position.y = Math.cos(Math.random() * 20);
 		tmpDot.position.z = Math.random() * 2 - 1;
 		tmpDot.position.normalize();
 		if (tmpDot.position.z == 1) {
@@ -625,7 +625,9 @@ const setVertices = () => {
 			while (k<6) {
 
 				let currPlane = new THREE.Plane();
-				let mat = new THREE.Matrix3(dots[i].position.x, dots[j].position.x, dots[k].position.x, dots[i].position.y, dots[j].position.y, dots[k].position.y, dots[i].position.z, dots[j].position.z, dots[k].position.z);
+				let mat = new THREE.Matrix3(dots[i].position.x, dots[j].position.x, dots[k].position.x, 
+				                            dots[i].position.y, dots[j].position.y, dots[k].position.y, 
+											dots[i].position.z, dots[j].position.z, dots[k].position.z);
 				const det = mat.determinant();
 				if ( det > 0 ) {
 					currPlane.setFromCoplanarPoints(dots[i].position, dots[j].position, dots[k].position);
@@ -642,27 +644,27 @@ const setVertices = () => {
 				tmpPos2.addScaledVector(normalVec, -vertexRadius);
 
 				const vertGeom = new THREE.SphereGeometry(1.0, 12, 12);
-				const vertMat = new THREE.MeshPhongMaterial({color: sphVertexColor1, opacity: 0.0});
-				vertMat.transparent = true;
+				const vertMat1 = new THREE.MeshPhongMaterial({color: sphVertexColor1, opacity: 0.0});
+				const vertMat2 = new THREE.MeshPhongMaterial({color: sphVertexColor1, opacity: 0.0});
+				vertMat1.transparent = true;
+				vertMat2.transparent = true;
 
-				tmpVert = new vertex(vertGeom, vertMat);
+				tmpVert = new vertex(vertGeom, vertMat1);
 				vertices.push(tmpVert);
 				tmpVert.position.copy(tmpPos1);
 				scene1.add(tmpVert);
 
-				tmpVert = new vertex(vertGeom, vertMat);
+				tmpVert = new vertex(vertGeom, vertMat2);
 				vertices.push(tmpVert);
 				tmpVert.position.copy(tmpPos2);
 				scene1.add(tmpVert);
 
 				let tmpVP = new vertexPair(vertices.length -2, vertices.length -1);
-				tmpVP.planeDots[0] = i;
-				tmpVP.planeDots[1] = j;
-				tmpVP.planeDots[2] = k;
+				tmpVP.planeDots.push(i,j,k);
 				vertices[tmpVP.v1].vp = vertexPairs.length;
 				vertices[tmpVP.v2].vp = vertexPairs.length;
-				tmpVP.setVertexColors(currPlane);
 				vertexPairs.push(tmpVP);
+				tmpVP.setVertexColors(currPlane);
 				
 				k++;
 			}
@@ -700,12 +702,10 @@ const setEdgeVisibility = () => {
 
 		const vpStart = vertices[edges[i].start].vp;
 		const vpEnd = vertices[edges[i].end].vp;
-
+		
 		if (vertexPairs[vpStart].visible && vertexPairs[vpEnd].visible) {
 			if (vertices[edges[i].start].visible && vertices[edges[i].end].visible) {
-
-				let planeIntersection = vertexPairs[vpStart].planeDots.filter(x => vertexPairs[vpEnd].planeDots.includes(x));
-				if (planeIntersection.length == 2) {
+				if (vertexPairs[vpStart].isNeighbor(vpEnd)) {
 
 					let startArr, endArr;
 
@@ -721,15 +721,22 @@ const setEdgeVisibility = () => {
 					}
 
 					let posIntersection = startArr.filter(x => endArr.includes(x));
-					if (posIntersection.length == 4) {
-						edges[i].visible = true;
-						vCount++;
+					if (edges[i].start.black || edges[i].end.black) {
+						if (posIntersection.length == 5) {
+							edges[i].visible = true;
+							vCount++;
+						}
+					} else {
+						if (posIntersection.length == 4) {
+							edges[i].visible = true;
+							vCount++;
+						}
 					}
 				}
 			}
 		}
 	}
-	//console.log(vCount, "edges");
+	console.log(vCount, "edges");
 }
 
 const setEdges = () => {
@@ -762,7 +769,6 @@ const setEdges = () => {
 		}
 		i++;
 	}
-	//console.log(edges.length);
 }
 
 const setGraph = () => {
@@ -781,7 +787,9 @@ const updateVertices = () => {
 		let dot3 = vertexPairs[i].planeDots[2];
 
 		let currPlane = new THREE.Plane();
-		let mat = new THREE.Matrix3(dots[dot1].position.x, dots[dot2].position.x, dots[dot3].position.x, dots[dot1].position.y, dots[dot2].position.y, dots[dot3].position.y, dots[dot1].position.z, dots[dot2].position.z, dots[dot3].position.z);
+		let mat = new THREE.Matrix3(dots[dot1].position.x, dots[dot2].position.x, dots[dot3].position.x, 
+		                            dots[dot1].position.y, dots[dot2].position.y, dots[dot3].position.y, 
+									dots[dot1].position.z, dots[dot2].position.z, dots[dot3].position.z);
 		const det = mat.determinant();
 		if ( det > 0 ) {
 			currPlane.setFromCoplanarPoints(dots[dot1].position, dots[dot2].position, dots[dot3].position);
@@ -809,10 +817,29 @@ const updateVertices = () => {
 const updateEdges = () => {
 	
 	for (let i=0; i<edges.length; i++) {
-		let endPts = [];
-		endPts.push(vertices[edges[i].start].position);
-		endPts.push(vertices[edges[i].end].position);
-		edges[i].geometry.setFromPoints(endPts);
+		const curve = new THREE.CatmullRomCurve3([
+			vertices[edges[i].start].position,
+			new THREE.Vector3( (vertices[edges[i].start].position.x *4 + vertices[edges[i].end].position.x)/5, 
+							   (vertices[edges[i].start].position.y *4 + vertices[edges[i].end].position.y)/5, 
+							   (vertices[edges[i].start].position.z *4 + vertices[edges[i].end].position.z)/5 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[edges[i].start].position.x *2 + vertices[edges[i].end].position.x)/3, 
+							   (vertices[edges[i].start].position.y *2 + vertices[edges[i].end].position.y)/3, 
+							   (vertices[edges[i].start].position.z *2 + vertices[edges[i].end].position.z)/3 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[edges[i].start].position.x + vertices[edges[i].end].position.x)/2, 
+			                   (vertices[edges[i].start].position.y + vertices[edges[i].end].position.y)/2, 
+							   (vertices[edges[i].start].position.z + vertices[edges[i].end].position.z)/2 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[edges[i].start].position.x + vertices[edges[i].end].position.x *2)/3, 
+			                   (vertices[edges[i].start].position.y + vertices[edges[i].end].position.y *2)/3, 
+							   (vertices[edges[i].start].position.z + vertices[edges[i].end].position.z *2)/3 ).setLength(vertexRadius),
+			new THREE.Vector3( (vertices[edges[i].start].position.x + vertices[edges[i].end].position.x *4)/5, 
+			                   (vertices[edges[i].start].position.y + vertices[edges[i].end].position.y *4)/5, 
+							   (vertices[edges[i].start].position.z + vertices[edges[i].end].position.z *4)/5 ).setLength(vertexRadius),
+			vertices[edges[i].end].position],
+			false,
+			"chordal"
+		);
+		const points = curve.getPoints( 50 );
+		edges[i].geometry.setFromPoints(points);
 	}
 	
 	setEdgeVisibility();
@@ -840,7 +867,7 @@ const guiObj = {
 	circleColor: 0x202020,
 	displayGraph: false,
 	graphScale: 1.2,
-	vertexColor1: 0xd85ac7,
+	vertexColor1: 0x5ac3d8,
 	vertexColor2: 0xffc800,
 	edgeColor: 0xd85ac7
 }
@@ -907,7 +934,7 @@ graphFolder.add(guiObj, 'displayGraph').onChange( value => {
 	}
 	setEdgeVisibility();
 } );
-graphFolder.add(guiObj, 'graphScale', 0.99, 2.0).onChange( value => {
+graphFolder.add(guiObj, 'graphScale', 1.05, 2.0).onChange( value => {
 	vertexRadius = value * 20.0;
 	updateGraph();
 } );
