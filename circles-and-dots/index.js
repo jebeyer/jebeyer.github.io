@@ -701,30 +701,23 @@ const setEdgeVisibility = () => {
 			if (vertices[edges[i].start].visible && vertices[edges[i].end].visible) {
 				if (vertexPairs[vpStart].isNeighbor(vpEnd)) {
 
-					let startArr, endArr;
+					let startArr, endArr, startIsV1, endIsV1;
+					
+					startIsV1 = (vertexPairs[vpStart].v1 == edges[i].start);
+					endIsV1 = (vertexPairs[vpEnd].v1 == edges[i].end);
 
-					if (edges[i].start == vertexPairs[vpStart].v1) {
-						startArr = [...new Set([...vertexPairs[vpStart].planeDots, ...vertexPairs[vpStart].posDots])];
-					} else {
-						startArr = [...new Set([...vertexPairs[vpStart].planeDots, ...vertexPairs[vpStart].negDots])];
-					}
-					if (edges[i].end == vertexPairs[vpEnd].v1) {
-						endArr   = [...new Set([...vertexPairs[vpEnd].planeDots, ...vertexPairs[vpEnd].posDots])];
-					} else {
-						endArr   = [...new Set([...vertexPairs[vpEnd].planeDots, ...vertexPairs[vpEnd].negDots])];
-					}
-
+					startArr = [...new Set([...vertexPairs[vpStart].planeDots, ...vertexPairs[vpStart].posDots])];
+					endArr   = [...new Set([...vertexPairs[vpEnd].planeDots, ...vertexPairs[vpEnd].posDots])];
 					let posIntersection = startArr.filter(x => endArr.includes(x));
-					if (edges[i].start.black || edges[i].end.black) {
-						if (posIntersection.length == 5) {
+
+					if (startIsV1 != endIsV1) {
+						if (posIntersection.length == 2) {
 							edges[i].visible = true;
 							vCount++;
 						}
-					} else {
-						if (posIntersection.length == 4) {
-							edges[i].visible = true;
-							vCount++;
-						}
+					} else if (posIntersection.length == 4) {
+						edges[i].visible = true;
+						vCount++;
 					}
 				}
 			}
