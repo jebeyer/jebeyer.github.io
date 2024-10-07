@@ -5,7 +5,7 @@ layout: default
 ### Mathematics
 
 <br/>
-I am currently a fifth-year graduate student working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. Lately, I have been very interested in constructions that relate cluster algebras to low-dimensional topology - knots, curves, surfaces, mapping class groups, etc.
+I am currently a sixth-year graduate student working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. Lately, I have been very interested in constructions that relate cluster algebras to low-dimensional topology - knots, curves, surfaces, mapping class groups, etc.
 
 #### Papers
 
