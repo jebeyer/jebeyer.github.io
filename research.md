@@ -17,7 +17,7 @@ I am currently a PhD student at the University of Oklahoma, working under the di
 #### In Preparation
 
 * **Separating Dots with Circles** <br/>
-   *Joint with Greg Muller and [Jaewon Min](https://sites.google.com/view/jaewonmin/home)* <br/>
+   *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
    We study partitions of dots on the sphere using circles and show that this admits a natural cluster structure. 
    A demo application can be viewed [here](./circles-and-dots/index.html).
 
