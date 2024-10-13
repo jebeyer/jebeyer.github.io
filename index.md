@@ -5,12 +5,17 @@ layout: default
 ### Welcome
 
 <br/> 
-James Beyer <br/>
-PhD Candidate and Graduate Teaching Assistant <br/>
-[Department of Mathematics](https://math.ou.edu/) <br/>
-[University of Oklahoma](http://www.ou.edu/)
+Hello! I am a sixth-year PhD student in mathematics at the [University of Oklahoma](https://math.ou.edu/), working under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My research is focused on cluster algebras, a type of commutative ring with connections to many different areas of mathematics and physics. 
 
-### Contact
+---
+
+#### Pronunciation
+
+My surname is of German origin and is pronounced like the word *buyer* in English.
+
+---
+
+#### Contact
 
 jebeyer at ou edu
 
