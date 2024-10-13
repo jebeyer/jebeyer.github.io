@@ -18,7 +18,7 @@ I am currently in my sixth year at the University of Oklahoma, working under the
 
 * **Separating Dots with Circles** <br/>
    *Joint with Greg Muller and [Jaewon Min](https://sites.google.com/view/jaewonmin/home)* <br/>
-   We study partitions of dots on the sphere using circles and show that this admits a natural cluster structure. <br/>
+   We study partitions of dots on the sphere using circles and show that this admits a natural cluster structure. 
    A demo application can be viewed [here](./circles-and-dots/index.html).
 
 * **Separating Curves in the Genus 2 Surface and the X7 Cluster Algebra** <br/>
