@@ -10,6 +10,8 @@ I am currently working on a PhD in mathematics at the [University of Oklahoma](h
 
 In my spare time, I enjoy seeking out new music and creating noise using synthesizers and electric guitars. If you're curious, you can hear some of my recordings at [bandcamp](https://whistlingkitty.bandcamp.com) or [soundcloud](https://soundcloud.com/whistlingkitty).
 
+If you're curious what I've been listenging to, you can see that at [listenbrainz](https://listenbrainz.org/user/whistlingkitty/stats/).
+
 ### Links
 
 <a href="https://github.com/jebeyer"><img src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub" width="48"/></a>
