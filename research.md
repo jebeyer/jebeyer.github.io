@@ -5,7 +5,7 @@ layout: default
 ### Mathematics
 
 <br/>
-I am currently in my sixth year at the University of Oklahoma, working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics.
+I am currently a PhD student at the University of Oklahoma, working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics.
 
 #### Papers
 
