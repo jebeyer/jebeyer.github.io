@@ -10,7 +10,6 @@ I am currently a PhD student at the University of Oklahoma, working under the di
 <br/>
 <br/>
 <a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
-<a href="https://orcid.org/0000-0002-2499-2863"><img src="./assets/ORCID-logo.png" alt="ORCID" width="48"/></a>
 
 
 #### Papers
