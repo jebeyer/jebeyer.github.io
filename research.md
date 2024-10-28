@@ -29,7 +29,7 @@ I am currently a PhD student at the University of Oklahoma, working under the di
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
-   We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra.
+   We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
 
 ---
 
