@@ -14,7 +14,6 @@ As for what I've been listening to, you can see that at [listenbrainz](https://l
 
 ### Links
 
-<a href="https://github.com/jebeyer"><img src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub" width="48"/></a>
 <a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="LinkedIn" width="48"/></a>
 <a href="https://listenbrainz.org/user/whistlingkitty/"><img src="./assets/ListenBrainz_Logo.png" alt="ListenBrainz" width="48"/></a>
 <a href="https://soundcloud.com/whistlingkitty"><img src="./assets/soundcloud-icon.png" alt="Soundcloud" width="48"/></a>
