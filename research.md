@@ -1,5 +1,6 @@
 ---
 layout: default
+mathjax: true
 ---
 
 ### Mathematics
@@ -21,9 +22,9 @@ I am currently a PhD student at the University of Oklahoma, working under the di
    We study partitions of dots on the sphere using circles and show that this admits a natural cluster structure. 
    A demo application can be viewed [here](./circles-and-dots/index.html).
 
-* **Separating Curves in the Genus 2 Surface and the X7 Cluster Algebra** <br/>
+* **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
-   We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the X7 cluster algebra.
+   We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra.
 
 ---
 
