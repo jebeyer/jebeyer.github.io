@@ -35,8 +35,8 @@ I am currently a PhD student at the University of Oklahoma, working under the di
 
 #### Recreation
 
-[OEIS sequence A308821](https://oeis.org/A308821) <br/> 
-Semiprimes where the sum of the digits equals the difference between the prime factors.
+* **[OEIS sequence A308821](https://oeis.org/A308821)** <br/> 
+  Semiprimes where the sum of the digits equals the difference between the prime factors.
 
 ---
 
