@@ -217,42 +217,6 @@ class vertexPair {
 		this.neighborGroups = [];
 		this.visible = false;
 	}
-	partitionProblem(plane) {
-		if (plane.isPlane) {
-
-			let newPosDots = [];
-			let newNegDots = [];
-			
-			const vertDists = [];
-			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v1].position)));
-			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v2].position)));
-				
-			let tmpDist;
-			for (let i=0; i<6; i++) {
-				if (!this.planeDots.includes(i)) {
-					tmpDist = Math.sign(plane.distanceToPoint(dots[i].position));
-					if (tmpDist == vertDists[0]) {
-						newPosDots.push(i);
-					} else if (tmpDist == vertDists[1]) {
-						newNegDots.push(i);
-					}
-				}
-			}
-			if (newPosDots.length == 3) {
-				return true;
-			} else if (this.negDots.length == 3 && newPosDots.length == 2) {
-				return true;
-			} else if (this.posDots.length == 3 && newNegDots.length == 2) {
-				return true;
-			}
-			let intersection1 = newPosDots.filter(x => this.posDots.includes(x));
-			let intersection2 = newNegDots.filter(x => this.negDots.includes(x));
-			if (intersection1.length == this.negDots.length && intersection2.length == this.posDots.length) {
-				return true;
-			}
-		}
-		return false;
-	}
 	setVertexColors(plane) {
 		if (plane.isPlane) {
 
@@ -356,6 +320,8 @@ class edge extends THREE.Line {
 		this.start = v1;
 		this.end = v2;
 		this.visible = false;
+		this.testPoint1 = points[1].clone();
+		this.testPoint2 = points[48].clone();
 	}
 }
 
@@ -657,9 +623,6 @@ const setVertices = () => {
 				} else if ( det < 0 ) {
 					currPlane.setFromCoplanarPoints(dots[i].position, dots[k].position, dots[j].position);
 				}
-				if (needToFixPlane(currPlane)) {
-					currPlane.negate();
-				}
 
 			    let tmpVert;
 				let tmpPos1 = new THREE.Vector3(0.0, 0.0, 0.0);
@@ -733,17 +696,57 @@ const setEdgeVisibility = () => {
 
 				if (graphVisible) {
 
+					let testPointA1 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.clone();
+					let testPointA2 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.clone();
+					let testPointB1 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.clone();
+					let testPointB2 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.clone();
+					testPointA1.normalize();
+					testPointA1.setLength(20);
+					testPointA2.normalize();
+					testPointA2.setLength(20);
+					testPointB1.normalize();
+					testPointB1.setLength(20);
+					testPointB2.normalize();
+					testPointB2.setLength(20);
+
 					if (vertexPairs[i].visible && vertexPairs[j].visible) {
+						let distancesA1 = [];
+						let distancesA2 = [];
+						let distancesB1 = [];
+						let distancesB2 = [];
+						for (let i=0; i<dots.length; i++) {
+							const tmpDistA1 = testPointA1.distanceToSquared(dots[i].position);
+							distancesA1.push(tmpDistA1);
+							const tmpDistA2 = testPointA2.distanceToSquared(dots[i].position);
+							distancesA2.push(tmpDistA2);
+							const tmpDistB1 = testPointB1.distanceToSquared(dots[i].position);
+							distancesB1.push(tmpDistB1);
+							const tmpDistB2 = testPointB2.distanceToSquared(dots[i].position);
+							distancesB2.push(tmpDistB2);
+						}
+						distancesA1.sort(compareNumbers);
+						distancesA2.sort(compareNumbers);
+						distancesB1.sort(compareNumbers);
+						distancesB2.sort(compareNumbers);
+
 						let startArr = [...new Set([...vertexPairs[i].planeDots, ...vertexPairs[i].posDots])];
 						let endArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].posDots])];
 						let posIntersection = startArr.filter(x => endArr.includes(x));
 
-						if (posIntersection.length == 2) {
-							edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
-							edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
-						} else if (posIntersection.length == 4) {
-							edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
-							edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
+						if (posIntersection.length == 2 || posIntersection.length == 4) {
+							const testA1 = distancesA1[3]-distancesA1[2];
+							const testA2 = distancesA2[3]-distancesA2[2];
+							const testB1 = distancesB1[3]-distancesB1[2];
+							const testB2 = distancesB2[3]-distancesB2[2];
+
+							if (testB1 < 0.005 && testB2 < 0.005) {
+								edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
+								edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
+							}
+							if (testA1 < 0.005 && testA2 < 0.005) {
+								edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
+								edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
+							}
 						}
 					}
 				}
@@ -799,45 +802,6 @@ const setGraph = () => {
 	setEdges();
 }
 
-function needToFixPlane(plane) {
-	if (plane.isPlane) {
-		let dotSum = new THREE.Vector3();
-		for (let i=0; i<dots.length; i++){
-			dotSum.x += dots[i].position.x;
-			dotSum.y += dots[i].position.y;
-			dotSum.z += dots[i].position.z;
-		}
-		dotSum.divideScalar(6.0);
-		if (plane.distanceToPoint(dotSum) > 0) {
-			return true;
-		}
-	}
-	return false;
-}
-function needToFixPlane2(plane) {
-	if (plane.isPlane) {
-		let xCoords = [];
-		let yCoords = [];
-		let zCoords = [];
-		let dotMedian = new THREE.Vector3();
-		for (let i=0; i<dots.length; i++){
-			xCoords.push(dots[i].position.x);
-			yCoords.push(dots[i].position.y);
-			zCoords.push(dots[i].position.z);
-		}
-		xCoords.sort(compareNumbers);
-		yCoords.sort(compareNumbers);
-		zCoords.sort(compareNumbers);
-		dotMedian.x = (xCoords[2] + xCoords[3])/2;
-		dotMedian.y = (yCoords[2] + yCoords[3])/2;
-		dotMedian.x = (zCoords[2] + zCoords[3])/2;
-		if (plane.distanceToPoint(dotMedian) > 0) {
-			return true;
-		}
-	}
-	return false;
-}
-
 const updateVertices = () => {
 	
 	for (let i=0; i<vertexPairs.length; i++) {
@@ -857,13 +821,6 @@ const updateVertices = () => {
 			currPlane.setFromCoplanarPoints(dots[dot1].position, dots[dot3].position, dots[dot2].position);
 		}
 		
-		if (needToFixPlane(currPlane)) {
-			currPlane.negate();
-		}
-		if (vertexPairs[i].partitionProblem(currPlane)) {
-			currPlane.negate();
-		}
-
 	    let tmpVert;
 		let tmpPos1 = new THREE.Vector3(0.0, 0.0, 0.0);
 		let tmpPos2 = new THREE.Vector3(0.0, 0.0, 0.0);
@@ -910,6 +867,8 @@ const updateEdges = () => {
 					);
 					const points1 = curve1.getPoints( 50 );
 					edges[vertexPairs[i].v1][vertexPairs[j].v1].geometry.setFromPoints(points1);
+					edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.copy(points1[1]);
+					edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.copy(points1[48]);
 
 					const curve2 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v1].position,
@@ -928,6 +887,8 @@ const updateEdges = () => {
 					);
 					const points2 = curve2.getPoints( 50 );
 					edges[vertexPairs[i].v1][vertexPairs[j].v2].geometry.setFromPoints(points2);
+					edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.copy(points2[1]);
+					edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.copy(points2[48]);
 
 					const curve3 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v2].position,
@@ -946,6 +907,8 @@ const updateEdges = () => {
 					);
 					const points3 = curve3.getPoints( 50 );
 					edges[vertexPairs[i].v2][vertexPairs[j].v1].geometry.setFromPoints(points3);
+					edges[vertexPairs[i].v2][vertexPairs[j].v1].testPoint1.copy(points3[1]);
+					edges[vertexPairs[i].v2][vertexPairs[j].v1].testPoint2.copy(points3[48]);
 
 					const curve4 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v2].position,
@@ -964,6 +927,8 @@ const updateEdges = () => {
 					);
 					const points4 = curve4.getPoints( 50 );
 					edges[vertexPairs[i].v2][vertexPairs[j].v2].geometry.setFromPoints(points4);
+					edges[vertexPairs[i].v2][vertexPairs[j].v2].testPoint1.copy(points4[1]);
+					edges[vertexPairs[i].v2][vertexPairs[j].v2].testPoint2.copy(points4[48]);
 				}
 				j++;
 			}
@@ -1060,7 +1025,7 @@ circleFolder.addColor(guiObj, 'circleColor').onChange( value => {
 circleFolder.add(guiObj, 'circleUpdates', {less: 0, more:1}).onChange( value => {
 	circleUpdateFreq = value;
 } );
-const graphFolder = gui.addFolder( 'sphebic graph (in development)' );
+const graphFolder = gui.addFolder( 'sphebic Voronoi graph' );
 graphFolder.add(guiObj, 'displayGraph').onChange( value => {
 	graphVisible = value;
 	updateGraph();
