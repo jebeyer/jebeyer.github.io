@@ -696,44 +696,44 @@ const setEdgeVisibility = () => {
 
 				if (graphVisible) {
 
-					let testPointA1 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.clone();
-					let testPointA2 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.clone();
-					let testPointB1 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.clone();
-					let testPointB2 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.clone();
-					testPointA1.normalize();
-					testPointA1.setLength(20);
-					testPointA2.normalize();
-					testPointA2.setLength(20);
-					testPointB1.normalize();
-					testPointB1.setLength(20);
-					testPointB2.normalize();
-					testPointB2.setLength(20);
-
 					if (vertexPairs[i].visible && vertexPairs[j].visible) {
-						let distancesA1 = [];
-						let distancesA2 = [];
-						let distancesB1 = [];
-						let distancesB2 = [];
-						for (let i=0; i<dots.length; i++) {
-							const tmpDistA1 = testPointA1.distanceToSquared(dots[i].position);
-							distancesA1.push(tmpDistA1);
-							const tmpDistA2 = testPointA2.distanceToSquared(dots[i].position);
-							distancesA2.push(tmpDistA2);
-							const tmpDistB1 = testPointB1.distanceToSquared(dots[i].position);
-							distancesB1.push(tmpDistB1);
-							const tmpDistB2 = testPointB2.distanceToSquared(dots[i].position);
-							distancesB2.push(tmpDistB2);
-						}
-						distancesA1.sort(compareNumbers);
-						distancesA2.sort(compareNumbers);
-						distancesB1.sort(compareNumbers);
-						distancesB2.sort(compareNumbers);
-
 						let startArr = [...new Set([...vertexPairs[i].planeDots, ...vertexPairs[i].posDots])];
 						let endArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].posDots])];
 						let posIntersection = startArr.filter(x => endArr.includes(x));
 
 						if (posIntersection.length == 2 || posIntersection.length == 4) {
+							let testPointA1 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.clone();
+							let testPointA2 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.clone();
+							let testPointB1 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.clone();
+							let testPointB2 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.clone();
+							testPointA1.normalize();
+							testPointA1.setLength(20);
+							testPointA2.normalize();
+							testPointA2.setLength(20);
+							testPointB1.normalize();
+							testPointB1.setLength(20);
+							testPointB2.normalize();
+							testPointB2.setLength(20);
+
+							let distancesA1 = [];
+							let distancesA2 = [];
+							let distancesB1 = [];
+							let distancesB2 = [];
+							for (let i=0; i<dots.length; i++) {
+								const tmpDistA1 = testPointA1.distanceToSquared(dots[i].position);
+								distancesA1.push(tmpDistA1);
+								const tmpDistA2 = testPointA2.distanceToSquared(dots[i].position);
+								distancesA2.push(tmpDistA2);
+								const tmpDistB1 = testPointB1.distanceToSquared(dots[i].position);
+								distancesB1.push(tmpDistB1);
+								const tmpDistB2 = testPointB2.distanceToSquared(dots[i].position);
+								distancesB2.push(tmpDistB2);
+							}
+							distancesA1.sort(compareNumbers);
+							distancesA2.sort(compareNumbers);
+							distancesB1.sort(compareNumbers);
+							distancesB2.sort(compareNumbers);
+
 							const testA1 = distancesA1[3]-distancesA1[2];
 							const testA2 = distancesA2[3]-distancesA2[2];
 							const testB1 = distancesB1[3]-distancesB1[2];
