@@ -19,6 +19,8 @@ My surname is of German origin and is pronounced like the word *buyer* in Englis
 
 jebeyer at ou edu
 
+jebeyerou at gmail com
+
 ---
 
 #### Links
