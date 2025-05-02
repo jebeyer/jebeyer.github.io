@@ -6,7 +6,7 @@ mathjax: true
 ### Mathematics
 
 <br/>
-I am currently a PhD student at the University of Oklahoma, working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics.
+I recently completed my PhD in mathematics at the University of Oklahoma, working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. In my research, I often consider connections to skein algebras, knot theory, decorated Teichmüller spaces, and higher Teichmüller spaces, while using tools from commutative algebra, algebraic geometry, representation theory, and combinatorics.
 <br/>
 <br/>
 <a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
@@ -30,6 +30,14 @@ I am currently a PhD student at the University of Oklahoma, working under the di
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
    We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
+
+
+#### Dissertation
+
+* **Deep Points of Cluster Varieties** <br/>
+  (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
+  We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra — the cluster algebra of the once-punctured torus — and its upper cluster algebra.<br/>
+  We then examine the deep points of skew-symmetrizable cluster algebras that arise from a folding of an acyclic quiver by a finite group of automorphisms. In particular, we study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
 
 ---
 
