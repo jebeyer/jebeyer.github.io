@@ -36,8 +36,8 @@ I recently completed my PhD in mathematics at the University of Oklahoma, workin
 
 * **Deep Points of Cluster Varieties** <br/>
   (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
-  We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra — the cluster algebra of the once-punctured torus — and its upper cluster algebra.<br/>
-  We then examine the deep points of skew-symmetrizable cluster algebras that arise from a folding of an acyclic quiver by a finite group of automorphisms. In particular, we study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
+  We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra and its upper cluster algebra.<br/>
+  We then study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
 
 ---
 
