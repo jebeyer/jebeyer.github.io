@@ -436,8 +436,7 @@ const setEdgeVisibility = () => {
 						let endArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].posDots])];
 						let posIntersection = startArr.filter(x => endArr.includes(x));
 
-						//if (posIntersection.length == currVoronoiOrder-1 || posIntersection.length == currVoronoiOrder+1) {
-						if (posIntersection.length == 2 || posIntersection.length == currVoronoiOrder+1) {
+						if (posIntersection.length == currVoronoiOrder-1 || posIntersection.length == currVoronoiOrder+1) {
 						//if (posIntersection.length == currVoronoiOrder-1) {
 							let testPointA1 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.clone();
 							let testPointA2 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.clone();
@@ -471,10 +470,10 @@ const setEdgeVisibility = () => {
 							distancesB1.sort(compareNumbers);
 							distancesB2.sort(compareNumbers);
 
-							const testA1 = distancesA1[3]-distancesA1[2];
-							const testA2 = distancesA2[3]-distancesA2[2];
-							const testB1 = distancesB1[3]-distancesB1[2];
-							const testB2 = distancesB2[3]-distancesB2[2];
+							const testA1 = distancesA1[currVoronoiOrder]-distancesA1[currVoronoiOrder-1];
+							const testA2 = distancesA2[currVoronoiOrder]-distancesA2[currVoronoiOrder-1];
+							const testB1 = distancesB1[currVoronoiOrder]-distancesB1[currVoronoiOrder-1];
+							const testB2 = distancesB2[currVoronoiOrder]-distancesB2[currVoronoiOrder-1];
 
 							if (testB1 < 0.005 && testB2 < 0.005) {
 								edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
