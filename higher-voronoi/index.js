@@ -383,20 +383,43 @@ const setDots = () => {
     let tmpDot;
     const dotGeom = new THREE.SphereGeometry(0.7, 12, 12);
     const dotMat = new THREE.MeshPhongMaterial({color: 0x112211});
+
+	let tmpPos = new THREE.Vector3();
+	tmpPos.x = (Math.random()*2)-1;
+	tmpPos.y = (Math.random()*2)-1;
+	tmpPos.z = (Math.random()*2)-1;
+	tmpPos.normalize();
+	tmpPos.setLength(20);
 	
-	//let initPosArr = [-.940,.340,-.33,.562,.827,.36,-.206,.915,-.347,-.272,-.949,.160,-.613,-.142,.777,.563,-.374,-.737];
-	//let initPosArr = [-.893,.129,-.431,.562,.827,.36,-.206,.915,-.347,-.272,-.949,.160,-.613,-.142,.777,.563,-.374,-.737];
-    for (let i = 0; i < maxDots; i++) {
+	tmpDot = new dot(dotGeom, dotMat);
+	tmpDot.position.copy(tmpPos);
+	dots.push(tmpDot);
+
+    for (let i = 1; i < maxDots; i++) {
+		let minDist = 0.0;
+		let j=0;
+		do {
+			tmpPos.x = (Math.random()*2)-1;
+			tmpPos.y = (Math.random()*2)-1;
+			tmpPos.z = (Math.random()*2)-1;
+			tmpPos.normalize();
+			tmpPos.setLength(20);
+
+			let distancesD = [];
+			for (let ii=0; ii<dots.length; ii++) {
+				const tmpDistD = tmpPos.distanceToSquared(dots[ii].position);
+				distancesD.push(tmpDistD);
+			}
+			distancesD.sort(compareNumbers);
+			minDist = Math.min(...distancesD);
+			j++;
+		} while (minDist < 15.0 && j<20); 
 
 		dotMat.transparent = false;
 		tmpDot = new dot(dotGeom, dotMat);
 		dots.push(tmpDot);
 		
-		tmpDot.position.x = Math.random()*Math.sin(i);
-		tmpDot.position.y = Math.random()*Math.cos(i);
-		tmpDot.position.z = Math.random()*Math.tan(i);
-		tmpDot.position.normalize();
-		tmpDot.position.setLength(20);
+		tmpDot.position.copy(tmpPos);
 		scene1.add(tmpDot);
 
 		if (i< numDots) {
