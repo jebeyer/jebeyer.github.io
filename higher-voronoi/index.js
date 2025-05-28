@@ -148,6 +148,11 @@ function compareNumbers (a,b) {
 
 }
 
+function areEqual (a,b) {
+	const diff = Math.abs(a-b);
+	return (diff < 0.01);
+}
+
 class dot extends THREE.Mesh {
 
     constructor(geom, mat) {
@@ -191,11 +196,6 @@ class vertexPair {
 			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v1].position)));
 			vertDists.push(Math.sign(plane.distanceToPoint(vertices[this.v2].position)));
 
-			let testValue1 = currVoronoiOrder - 1;
-			let testValue1b = numDots - (testValue1 + 3);
-			let testValue2 = currVoronoiOrder - 2;
-			let testValue2b = numDots - (testValue2 + 3);
-				
 			let tmpDist;
 			for (let i=0; i<numDots; i++) {
 				if (!this.planeDots.includes(i)) {
@@ -207,43 +207,50 @@ class vertexPair {
 					}
 				}
 			}
-			if (this.posDots.length == testValue2 || this.negDots.length == testValue2b) {
+			
+			this.visible = false;
+			vertices[this.v1].visible = false;
+			vertices[this.v2].visible = false;
+			
+			if (this.posDots.length == currVoronoiOrder-2) {
 				this.visible = true;
 				vertices[this.v1].visible = true;
 				vertices[this.v1].black = false;
 				vertices[this.v1].material.color.set(sphVertexColor2);
-				vertices[this.v2].visible = true;
-				vertices[this.v2].black = true;
-				vertices[this.v2].material.color.set(sphVertexColor1);
-			} else if (this.posDots.length == testValue1 || this.negDots.length == testValue1b) {
+			} else if (this.posDots.length == currVoronoiOrder-1) {
 				this.visible = true;
 				vertices[this.v1].visible = true;
 				vertices[this.v1].black = true;
 				vertices[this.v1].material.color.set(sphVertexColor1);
+			}
+			if (this.negDots.length == currVoronoiOrder-1) {
+				this.visible = true;
+				vertices[this.v2].visible = true;
+				vertices[this.v2].black = true;
+				vertices[this.v2].material.color.set(sphVertexColor1);
+			} else if (this.negDots.length == currVoronoiOrder-2) {
+				this.visible = true;
 				vertices[this.v2].visible = true;
 				vertices[this.v2].black = false;
 				vertices[this.v2].material.color.set(sphVertexColor2);
-			} else {
-				this.visible = false;
-				vertices[this.v1].visible = false;
-				vertices[this.v2].visible = false;
 			}
-			
-			this.setDisplay(this.visible);
+
+			this.setDisplay();
 			
 			return true;
 		}
 		return false;
 	}
-	setDisplay(value) {
-		this.visible = value;
-		
+	setDisplay() {
 		if (this.visible && graphVisible) {
-			if (vertices[this.v1].visible && vertices[this.v2].visible) {
+			if (vertices[this.v1].visible) {
 				vertices[this.v1].material.opacity = 1.0;
-				vertices[this.v2].material.opacity = 1.0;
 			} else {
 				vertices[this.v1].material.opacity = 0.0;
+			}
+			if (vertices[this.v2].visible) {
+				vertices[this.v2].material.opacity = 1.0;
+			} else {
 				vertices[this.v2].material.opacity = 0.0;
 			}
 		} else {
@@ -291,7 +298,84 @@ class edge extends THREE.Line {
 		this.visible = false;
 		this.testPoint1 = points[1].clone();
 		this.testPoint2 = points[48].clone();
+		this.testPointMid = points[24].clone();
+		this.testDots = [];
+		
 	}
+	testEdge() {
+		if (vertices[this.start].visible && vertices[this.end].visible) {
+		
+			let testPointA = this.testPointMid.clone();
+			testPointA.normalize();
+			testPointA.setLength(20);
+
+			let distancesA1 = [];
+			for (let i=0; i<numDots; i++) {
+				const tmpDistA1 = testPointA.distanceToSquared(dots[i].position);
+				distancesA1.push(tmpDistA1);
+			}
+			distancesA1.sort(compareNumbers);
+
+			let distancesA2 = [];
+			for (let ii=0; ii<2; ii++) {
+				const tmpDistA2 = testPointA.distanceToSquared(dots[this.testDots[ii]].position);
+				distancesA2.push(tmpDistA2);
+			}
+			distancesA2.sort(compareNumbers);
+			
+			if (areEqual(distancesA2[1], distancesA2[0])) {
+				if (areEqual(distancesA2[0], distancesA1[currVoronoiOrder-1]) && areEqual(distancesA2[1], distancesA1[currVoronoiOrder])) {
+					let testPointB = this.testPoint1.clone();
+					testPointB.normalize();
+					testPointB.setLength(20);
+
+					let distancesB1 = [];
+					for (let i=0; i<numDots; i++) {
+						const tmpDistB1 = testPointB.distanceToSquared(dots[i].position);
+						distancesB1.push(tmpDistB1);
+					}
+					distancesB1.sort(compareNumbers);
+
+					let distancesB2 = [];
+					for (let ii=0; ii<2; ii++) {
+						const tmpDistB2 = testPointB.distanceToSquared(dots[this.testDots[ii]].position);
+						distancesB2.push(tmpDistB2);
+					}
+					distancesB2.sort(compareNumbers);
+					
+					if (areEqual(distancesB2[1], distancesB2[0])) {
+						if (areEqual(distancesB2[0], distancesB1[currVoronoiOrder-1]) && areEqual(distancesB2[1], distancesB1[currVoronoiOrder])) {
+							let testPointC = this.testPoint2.clone();
+							testPointC.normalize();
+							testPointC.setLength(20);
+
+							let distancesC1 = [];
+							for (let i=0; i<numDots; i++) {
+								const tmpDistC1 = testPointC.distanceToSquared(dots[i].position);
+								distancesC1.push(tmpDistC1);
+							}
+							distancesC1.sort(compareNumbers);
+
+							let distancesC2 = [];
+							for (let ii=0; ii<2; ii++) {
+								const tmpDistC2 = testPointC.distanceToSquared(dots[this.testDots[ii]].position);
+								distancesC2.push(tmpDistC2);
+							}
+							distancesC2.sort(compareNumbers);
+							
+							if (areEqual(distancesC2[1], distancesC2[0])) {
+								if (areEqual(distancesC2[0], distancesC1[currVoronoiOrder-1]) && areEqual(distancesC2[1], distancesC1[currVoronoiOrder])) {
+									return true;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+
 }
 
 const setDots = () => {
@@ -383,12 +467,11 @@ const setVertices = () => {
 				if (dots[i].visible && dots[j].visible && dots[k].visible) {
 					tmpVP.setVertexColors(currPlane);
 				} else {
+					tmpVP.visible = false;
 					vertices[tmpVP.v1].visible = false;
 					vertices[tmpVP.v2].visible = false;
-					tmpVP.setDisplay(false);
+					tmpVP.setDisplay();
 				}
-
-				//tmpVP.setVertexColors(currPlane);
 				
 				k++;
 			}
@@ -432,57 +515,17 @@ const setEdgeVisibility = () => {
 				if (graphVisible) {
 
 					if (vertexPairs[i].visible && vertexPairs[j].visible) {
-						let startArr = [...new Set([...vertexPairs[i].planeDots, ...vertexPairs[i].posDots])];
-						let endArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].posDots])];
-						let posIntersection = startArr.filter(x => endArr.includes(x));
-
-						if (posIntersection.length == currVoronoiOrder-1 || posIntersection.length == currVoronoiOrder+1) {
-						//if (posIntersection.length == currVoronoiOrder-1) {
-							let testPointA1 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.clone();
-							let testPointA2 = edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.clone();
-							let testPointB1 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.clone();
-							let testPointB2 = edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.clone();
-							testPointA1.normalize();
-							testPointA1.setLength(20);
-							testPointA2.normalize();
-							testPointA2.setLength(20);
-							testPointB1.normalize();
-							testPointB1.setLength(20);
-							testPointB2.normalize();
-							testPointB2.setLength(20);
-
-							let distancesA1 = [];
-							let distancesA2 = [];
-							let distancesB1 = [];
-							let distancesB2 = [];
-							for (let i=0; i<numDots; i++) {
-								const tmpDistA1 = testPointA1.distanceToSquared(dots[i].position);
-								distancesA1.push(tmpDistA1);
-								const tmpDistA2 = testPointA2.distanceToSquared(dots[i].position);
-								distancesA2.push(tmpDistA2);
-								const tmpDistB1 = testPointB1.distanceToSquared(dots[i].position);
-								distancesB1.push(tmpDistB1);
-								const tmpDistB2 = testPointB2.distanceToSquared(dots[i].position);
-								distancesB2.push(tmpDistB2);
-							}
-							distancesA1.sort(compareNumbers);
-							distancesA2.sort(compareNumbers);
-							distancesB1.sort(compareNumbers);
-							distancesB2.sort(compareNumbers);
-
-							const testA1 = distancesA1[currVoronoiOrder]-distancesA1[currVoronoiOrder-1];
-							const testA2 = distancesA2[currVoronoiOrder]-distancesA2[currVoronoiOrder-1];
-							const testB1 = distancesB1[currVoronoiOrder]-distancesB1[currVoronoiOrder-1];
-							const testB2 = distancesB2[currVoronoiOrder]-distancesB2[currVoronoiOrder-1];
-
-							if (testB1 < 0.005 && testB2 < 0.005) {
-								edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
-								edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
-							}
-							if (testA1 < 0.005 && testA2 < 0.005) {
-								edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
-								edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
-							}
+						if (edges[vertexPairs[i].v1][vertexPairs[j].v1].testEdge()) {
+							edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
+						}
+						if (edges[vertexPairs[i].v1][vertexPairs[j].v2].testEdge()) {
+							edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
+						} 
+						if (edges[vertexPairs[i].v2][vertexPairs[j].v1].testEdge()) {
+							edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
+						}
+						if (edges[vertexPairs[i].v2][vertexPairs[j].v2].testEdge()) {
+							edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
 						}
 					}
 				}
@@ -505,25 +548,34 @@ const setEdges = () => {
 	while (i < iMax) {
 		j = i+1;
 		while (j < jMax) {
+			let intersection1 = vertexPairs[i].planeDots.filter(x => vertexPairs[j].planeDots.includes(x));
 			if (vertexPairs[i].isNeighbor(j)) {
 				tmpEdge = new edge(vertexPairs[i].v1, vertexPairs[j].v1);
 				edges[vertexPairs[i].v1][vertexPairs[j].v1] = tmpEdge;
 				edges[vertexPairs[j].v1][vertexPairs[i].v1] = tmpEdge;
+				tmpEdge.testDots.push(intersection1[0]);
+				tmpEdge.testDots.push(intersection1[1]);
 				scene1.add(tmpEdge);
 
 				tmpEdge = new edge(vertexPairs[i].v1, vertexPairs[j].v2);
 				edges[vertexPairs[i].v1][vertexPairs[j].v2] = tmpEdge;
 				edges[vertexPairs[j].v2][vertexPairs[i].v1] = tmpEdge;
+				tmpEdge.testDots.push(intersection1[0]);
+				tmpEdge.testDots.push(intersection1[1]);
 				scene1.add(tmpEdge);
 
 				tmpEdge = new edge(vertexPairs[i].v2, vertexPairs[j].v1);
 				edges[vertexPairs[i].v2][vertexPairs[j].v1] = tmpEdge;
 				edges[vertexPairs[j].v1][vertexPairs[i].v2] = tmpEdge;
+				tmpEdge.testDots.push(intersection1[0]);
+				tmpEdge.testDots.push(intersection1[1]);
 				scene1.add(tmpEdge);
 
 				tmpEdge = new edge(vertexPairs[i].v2, vertexPairs[j].v2);
 				edges[vertexPairs[i].v2][vertexPairs[j].v2] = tmpEdge;
 				edges[vertexPairs[j].v2][vertexPairs[i].v2] = tmpEdge;
+				tmpEdge.testDots.push(intersection1[0]);
+				tmpEdge.testDots.push(intersection1[1]);
 				scene1.add(tmpEdge);
 			}
 			j++;
@@ -574,9 +626,10 @@ const updateVertices = () => {
 
 			vertexPairs[i].setVertexColors(currPlane);
 		} else {
+			vertexPairs[i].visible = false;
 			vertices[vertexPairs[i].v1].visible = false;
 			vertices[vertexPairs[i].v2].visible = false;
-			vertexPairs[i].setDisplay(false);
+			vertexPairs[i].setDisplay();
 		}
 	}
 }
@@ -613,6 +666,7 @@ const updateEdges = () => {
 					edges[vertexPairs[i].v1][vertexPairs[j].v1].geometry.setFromPoints(points1);
 					edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint1.copy(points1[1]);
 					edges[vertexPairs[i].v1][vertexPairs[j].v1].testPoint2.copy(points1[48]);
+					edges[vertexPairs[i].v1][vertexPairs[j].v1].testPointMid.copy(points1[24]);
 
 					const curve2 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v1].position,
@@ -633,6 +687,7 @@ const updateEdges = () => {
 					edges[vertexPairs[i].v1][vertexPairs[j].v2].geometry.setFromPoints(points2);
 					edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint1.copy(points2[1]);
 					edges[vertexPairs[i].v1][vertexPairs[j].v2].testPoint2.copy(points2[48]);
+					edges[vertexPairs[i].v1][vertexPairs[j].v2].testPointMid.copy(points2[24]);
 
 					const curve3 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v2].position,
@@ -653,6 +708,7 @@ const updateEdges = () => {
 					edges[vertexPairs[i].v2][vertexPairs[j].v1].geometry.setFromPoints(points3);
 					edges[vertexPairs[i].v2][vertexPairs[j].v1].testPoint1.copy(points3[1]);
 					edges[vertexPairs[i].v2][vertexPairs[j].v1].testPoint2.copy(points3[48]);
+					edges[vertexPairs[i].v2][vertexPairs[j].v1].testPointMid.copy(points3[24]);
 
 					const curve4 = new THREE.CatmullRomCurve3([
 						vertices[vertexPairs[i].v2].position,
@@ -673,6 +729,7 @@ const updateEdges = () => {
 					edges[vertexPairs[i].v2][vertexPairs[j].v2].geometry.setFromPoints(points4);
 					edges[vertexPairs[i].v2][vertexPairs[j].v2].testPoint1.copy(points4[1]);
 					edges[vertexPairs[i].v2][vertexPairs[j].v2].testPoint2.copy(points4[48]);
+					edges[vertexPairs[i].v2][vertexPairs[j].v2].testPointMid.copy(points4[24]);
 				}
 				j++;
 			}
@@ -719,8 +776,8 @@ gui.addColor(guiObj, 'backgroundColor').onChange( value => {
 	scene1.background = new THREE.Color(value);
 } );
 const dotFolder = gui.addFolder( 'dots' );
-dotFolder.add(guiObj, 'numberOfDots', 6, maxDots, 1).onChange (value => {
-	maxVoronoiOrder = value - 3;
+dotFolder.add(guiObj, 'numberOfDots', 4, maxDots, 1).onChange (value => {
+	maxVoronoiOrder = Math.floor(value/2);
 	VO.max(maxVoronoiOrder);
 	if(VO.getValue() > maxVoronoiOrder) VO.setValue(maxVoronoiOrder);
 	VO.updateDisplay();
@@ -765,9 +822,8 @@ dotFolder.addColor(guiObj, 'dotColor').onChange( value => {
 	}
 } );
 const graphFolder = gui.addFolder( 'sphebic Voronoi graph' );
-const VO = graphFolder.add(guiObj, 'VoronoiOrder', 3, 3, 1);
+const VO = graphFolder.add(guiObj, 'VoronoiOrder', 2, 3, 1);
 VO.onChange( value => {
-	//console.log(value);
 	currVoronoiOrder = value;
 	updateGraph();
 } );
