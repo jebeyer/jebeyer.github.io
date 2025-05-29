@@ -35,7 +35,7 @@ let edges = [[]];
 let	sphVertexColor1 = 0x5ac3d8;
 let	sphVertexColor2 = 0xffc800;
 let	sphEdgeColor = 0xd85ac7;
-let vertexRadius = 20.4;
+let vertexRadius = 21.0;
 let graphVisible = true;
 let numDots = 6;
 let maxDots = 9;
@@ -537,18 +537,35 @@ const setEdgeVisibility = () => {
 
 				if (graphVisible) {
 
+					let startPosArr = [...new Set([...vertexPairs[i].planeDots, ...vertexPairs[i].posDots])];
+					let endPosArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].posDots])];
+					let startNegArr = [...new Set([...vertexPairs[i].planeDots, ...vertexPairs[i].negDots])];
+					let endNegArr   = [...new Set([...vertexPairs[j].planeDots, ...vertexPairs[j].negDots])];
+				
 					if (vertexPairs[i].visible && vertexPairs[j].visible) {
 						if (edges[vertexPairs[i].v1][vertexPairs[j].v1].testEdge()) {
-							edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
+							let posIntersection = startPosArr.filter(x => endPosArr.includes(x));
+							if (posIntersection.length == currVoronoiOrder+1) {
+								edges[vertexPairs[i].v1][vertexPairs[j].v1].visible = true;
+							}
 						}
 						if (edges[vertexPairs[i].v1][vertexPairs[j].v2].testEdge()) {
-							edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
+							let posNegIntersection = startPosArr.filter(x => endNegArr.includes(x));
+							if (posNegIntersection.length == currVoronoiOrder+1) {
+								edges[vertexPairs[i].v1][vertexPairs[j].v2].visible = true;
+							}
 						} 
 						if (edges[vertexPairs[i].v2][vertexPairs[j].v1].testEdge()) {
-							edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
+							let negPosIntersection = startNegArr.filter(x => endPosArr.includes(x));
+							if (negPosIntersection.length == currVoronoiOrder+1) {
+								edges[vertexPairs[i].v2][vertexPairs[j].v1].visible = true;
+							}
 						}
 						if (edges[vertexPairs[i].v2][vertexPairs[j].v2].testEdge()) {
-							edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
+							let negIntersection = startNegArr.filter(x => endNegArr.includes(x));
+							if (negIntersection.length == currVoronoiOrder+1) {
+								edges[vertexPairs[i].v2][vertexPairs[j].v2].visible = true;
+							}
 						}
 					}
 				}
@@ -781,7 +798,7 @@ const guiObj = {
 	dotColor: 0x112211,
 	VoronoiOrder: 3,
 	displayGraph: true,
-	graphScale: 1.02,
+	graphScale: 1.05,
 	vertexColor1: 0x5ac3d8,
 	vertexColor2: 0xffc800,
 	edgeColor: 0xd85ac7
