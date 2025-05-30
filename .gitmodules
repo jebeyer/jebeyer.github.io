@@ -1,3 +1,6 @@
 [submodule "circles-and-dots"]
 	path = circles-and-dots
 	url = https://github.com/jebeyer/circles-and-dots
+[submodule "higher-voronoi"]
+	path = higher-voronoi
+	url = https://github.com/jebeyer/higher-voronoi
