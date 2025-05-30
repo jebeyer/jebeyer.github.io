@@ -19,13 +19,20 @@ I recently completed my PhD in mathematics at the University of Oklahoma, workin
    *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, [doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027) <br/>
    We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
 
+#### Preprints
+
+* **Separating Dots with Circles** ([arXiv](https://arxiv.org/abs/2505.22851)) <br/>
+   *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
+   Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size k and l is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local `moves'. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition. <br/>
+   Two demo applications have been developed for this project:
+  * [Circles and Dots](./circles-and-dots/index.html)
+  * [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 
 #### In Preparation
 
-* **Separating Dots with Circles** <br/>
+* **Cluster Algebras of Voronoi Decompositions** <br/>
    *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
-   We study partitions of dots on the sphere using circles and show that this admits a natural cluster structure. 
-   A demo application can be viewed [here](./circles-and-dots/index.html).
+   Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure. 
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
@@ -33,7 +40,7 @@ I recently completed my PhD in mathematics at the University of Oklahoma, workin
 
 ---
 
-#### Dissertation
+#### PhD Dissertation
 
 * **Deep Points of Cluster Varieties** <br/>
   (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
