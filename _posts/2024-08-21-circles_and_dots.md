@@ -4,10 +4,12 @@ date: 2024-08-21
 title: circles and dots
 ---
 
-I've been developing a demo application for an ongoing research project. 
+A demo application showing circles on the sphere that divide six points into sets of three and three. 
 <!--more-->
 
-The application allows you to move dots around a sphere, and draws circles which separate the dots so that there are three on each side. 
-I plan to fill in more details here in the future, but for now you can see the still-in-development application here:
+The application draws the seven circles which separate six dots so that there are three on each side. The position of the dots can be changed by manually dragging them, or by selecting the animateDots option in the menu. As the position of the dots changes, the collection of circles changes along with it. 
 
 [circles and dots](https://jebeyer.github.io/circles-and-dots/index.html)
+
+This application is intended to demonstrate one of the results from the preprint [Separating dots with circles](https://arxiv.org/abs/2505.22851).
+
