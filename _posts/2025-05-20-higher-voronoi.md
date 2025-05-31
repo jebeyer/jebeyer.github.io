@@ -2,6 +2,7 @@
 layout: post
 date: 2025-05-30
 title: higher Voronoi diagrams
+mathjax: true
 ---
 
 A demo application showing order-\\(k\\) spherical bicolored Vornoi diagrams. 
