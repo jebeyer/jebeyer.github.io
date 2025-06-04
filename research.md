@@ -7,10 +7,11 @@ mathjax: true
 
 <br/>
 I recently completed my PhD in mathematics at the University of Oklahoma, working under the direction of [Greg Muller](https://math.ou.edu/~gmuller). My research is focused on [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. In my research, I often consider connections to skein algebras, knot theory, decorated Teichmüller spaces, and higher Teichmüller spaces, while using tools from commutative algebra, algebraic geometry, representation theory, and combinatorics.
-<br/>
-<br/>
-<a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
 
+#### Links
+
+<a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
+<a href="https://scholar.google.com/citations?&user=pRnb5PwAAAAJ"><img src="./assets/Google_Scholar_logo.png" alt="GoogleScholar" width="48"/></a>
 
 #### Papers
 
