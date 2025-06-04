@@ -27,6 +27,7 @@ jebeyerou at gmail com
 
 
 <a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
+<a href="https://scholar.google.com/citations?&user=pRnb5PwAAAAJ"><img src="./assets/Google_Scholar_logo.png" alt="GoogleScholar" width="48"/></a>
 <a href="https://orcid.org/0000-0002-2499-2863"><img src="./assets/ORCID-logo.png" alt="ORCID" width="48"/></a>
 <a href="https://www.linkedin.com/in/james-beyer-72558767"><img src="./assets/linkedin-icon-512.png" alt="LinkedIn" width="48"/></a> 
 <a href="https://github.com/jebeyer"><img src="./assets/GitHub-Mark-120px-plus.png" alt="GitHub" width="48"/></a> 
