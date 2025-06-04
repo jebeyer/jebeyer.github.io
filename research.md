@@ -31,7 +31,7 @@ I recently completed my PhD in mathematics at the University of Oklahoma, workin
 #### In Preparation
 
 * **Cluster Algebras of Voronoi Decompositions** <br/>
-   *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
+   *Joint with Jaewon Min and Greg Muller* <br/>
    Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure. 
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
@@ -42,7 +42,7 @@ I recently completed my PhD in mathematics at the University of Oklahoma, workin
 
 #### PhD Dissertation
 
-* **Deep Points of Cluster Varieties** <br/>
+* **Deep Points of Cluster Varieties** ([ProQuest](https://www.proquest.com/docview/3199939057?sourcetype=Dissertations%20&%20Theses)) <br/>
   (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
   We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra and its upper cluster algebra.<br/>
   We then study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
