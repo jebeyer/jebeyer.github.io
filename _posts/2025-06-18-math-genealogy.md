@@ -10,7 +10,7 @@ Let's explore my math genealogy!
 
 The [mathgenealogy.org](https://mathgenealogy.org/) admins are rather backlogged at the moment, so I can't link to my personal entry in their database just yet, but my advisor's page is avalable [here](https://www.mathgenealogy.org/id.php?id=173648).
 
-After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy. We're going to try to use [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here.
+After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy. We're going to use [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here. You can use the controls or your mouse wheel to zoom, then drag with your mouse to move to another part of the tree.
 
 <script src="../../../assets/dist/hammer.js">
   
@@ -24,7 +24,7 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
 
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
-<div id="container" style="width: 95%; height: 80%; border:1px solid black; ">
+<div id="container" style="width: 100%; height: 100%; border:1px solid black; ">
 <svg id="math-tree" xmlns="https://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit; " width="8482pt" height="9498pt" viewBox="0.00 0.00 8482.00 9498.00" version="1.1">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 9494)">
 <title>%3</title>
@@ -3251,3 +3251,30 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
         })
       };
 </script>
+
+One particularly interesting path (from the bottom up) is:
+1. James Beyer
+2. Greg Muller
+3. Yuri Berest
+4. Pavel Winternitz
+5. Yakov Abramovich Smodorinskii
+6. Lev Landau
+7. Abram Fjodorovich Ioffe
+8. Wilhelm Conrad Röntgen
+9. Gustav Zeuner
+10. Wilhelm Hankel
+11. Johann Salomo Christoph Schweigger
+12. Johann Mayer
+13. Abraham Kästner
+14. Christian Hausen
+15. Johann Planer
+16. Johann Pasch
+17. Michael Walther
+18. Johann Andreas Quenstedt
+19. Christoph Nottnagel
+20. Ambrosius Rhodius
+21. Johannes Kepler
+22. Tycho Brahe
+23. Caspar Peucer
+24. Georg Joachim von Leuchen Rheticus
+15. Nicolaus Copernicus
