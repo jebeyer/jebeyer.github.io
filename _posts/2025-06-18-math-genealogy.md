@@ -18,7 +18,7 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
 <script src="../../../assets/dist/svg-pan-zoom.js">
   
 </script>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js">
   
 </script>
 
