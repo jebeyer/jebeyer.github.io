@@ -2,7 +2,7 @@
 layout: post
 date: 2025-06-18
 title: math genealogy
-mathjax: true
+mathjax: false
 ---
 
 Let's explore my math genealogy!
@@ -3252,6 +3252,8 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
       };
 </script>
 
+<br><br><br>
+
 One particularly interesting path (from the bottom up) is:
 1. James Beyer
 2. Greg Muller
@@ -3260,10 +3262,10 @@ One particularly interesting path (from the bottom up) is:
 5. Yakov Abramovich Smodorinskii
 6. Lev Landau
 7. Abram Fjodorovich Ioffe
-8. Wilhelm Conrad Röntgen
+8. Wilhelm Röntgen
 9. Gustav Zeuner
 10. Wilhelm Hankel
-11. Johann Salomo Christoph Schweigger
+11. Johann Schweigger
 12. Johann Mayer
 13. Abraham Kästner
 14. Christian Hausen
@@ -3277,4 +3279,7 @@ One particularly interesting path (from the bottom up) is:
 22. Tycho Brahe
 23. Caspar Peucer
 24. Georg Joachim von Leuchen Rheticus
-15. Nicolaus Copernicus
+25. Nicolaus Copernicus
+
+
+
