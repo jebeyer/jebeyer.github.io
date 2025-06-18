@@ -12,10 +12,10 @@ The [mathgenealogy.org](https://mathgenealogy.org/) admins are rather backlogged
 
 After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy. We're going to try to use [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here.
 
-<script src="../../assets/dist/hammer.js">
+<script src="../../../assets/dist/hammer.js">
   
 </script>
-<script src="../../assets/dist/svg-pan-zoom.js">
+<script src="../../../assets/dist/svg-pan-zoom.js">
   
 </script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js">
