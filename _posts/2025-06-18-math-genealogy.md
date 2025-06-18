@@ -25,7 +25,7 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
 <div id="container" style="width: 95%; height: 80%; border:1px solid black; ">
-<svg id="math-tree" xmlns="http://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit; " width="8482pt" height="9498pt" viewBox="0.00 0.00 8482.00 9498.00" version="1.1">
+<svg id="math-tree" xmlns="https://www.w3.org/2000/svg" style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit; " width="8482pt" height="9498pt" viewBox="0.00 0.00 8482.00 9498.00" version="1.1">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 9494)">
 <title>%3</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-9494 8478,-9494 8478,4 -4,4"/>
@@ -3237,7 +3237,7 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
 
 <script>
     window.onload = function() {
-        var panZoom = window.panZoom = svgPanZoom('#demo-tiger', {
+        var panZoom = window.panZoom = svgPanZoom('#math-tree', {
           zoomEnabled: true,
           controlIconsEnabled: true,
           fit: 1,
