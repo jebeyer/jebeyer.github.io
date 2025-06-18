@@ -5,7 +5,9 @@ layout: default
 ### Welcome
 
 <br/> 
-Hello! I recently completed my PhD in mathematics at the [University of Oklahoma](https://math.ou.edu/), working under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My [research](./research.html) is focused on cluster algebras, a type of commutative ring with connections to many different areas of mathematics and physics. My math genealogy can be viewed [here](./2025/06/18/math-genealogy.html).
+Hello! I recently completed my PhD in mathematics at the [University of Oklahoma](https://math.ou.edu/), working under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My [research](./research.html) is focused on cluster algebras, a type of commutative ring with connections to many different areas of mathematics and physics. 
+
+My math genealogy can be viewed [here](./2025/06/18/math-genealogy.html).
 
 ---
 
