@@ -3252,7 +3252,7 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
       };
 </script>
 
-<br><br><br>
+<br>
 
 One particularly interesting path (from the bottom up) is:
 1. James Beyer
