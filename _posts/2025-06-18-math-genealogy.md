@@ -10,7 +10,7 @@ Let's explore my math genealogy!
 
 The [mathgenealogy.org](https://mathgenealogy.org/) admins are rather backlogged at the moment, so I can't link to my personal entry in their database just yet, but my advisor's page is avalable [here](https://www.mathgenealogy.org/id.php?id=173648).
 
-After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy. We're going to use [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here. You can use the controls or your mouse wheel to zoom, then drag with your mouse to move to another part of the tree.
+After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy. I'm using [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here. You can use the controls or your mouse wheel to zoom, then drag with your mouse to move to another part of the tree.
 
 <script src="../../../assets/dist/hammer.js">
   
