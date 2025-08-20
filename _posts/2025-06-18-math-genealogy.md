@@ -8,7 +8,7 @@ mathjax: false
 Let's explore my math genealogy!
 <!--more-->
 
-The [mathgenealogy.org](https://mathgenealogy.org/) admins are rather backlogged at the moment, so I can't link to my personal entry in their database just yet, but my advisor's page is avalable [here](https://www.mathgenealogy.org/id.php?id=173648).
+The [mathgenealogy.org](https://mathgenealogy.org/) admins are rather backlogged at the moment, so I can't link to my personal entry in their database just yet, but my advisor's page is avalable [here](https://www.mathgenealogy.org/id.php?id=173648). *Update 2025-08-19*: my genealogy page is now available [here](https://www.mathgenealogy.org/id.php?id=338931).
 
 After modifying the output of [geneagrapher](https://github.com/davidalber/geneagrapher), I was able to generate an svg of my math genealogy using graphviz. I'm using [svg-pan-zoom](https://github.com/bumbu/svg-pan-zoom) to embed it here. You can use the controls or your mouse wheel to zoom, then drag with your mouse to move to another part of the tree.
 
@@ -2718,11 +2718,11 @@ After modifying the output of [geneagrapher](https://github.com/davidalber/genea
 <path fill="none" stroke="black" stroke-width="2" d="M3918.7,-2179.96C4018.64,-2140.49 4256.37,-2046.61 4364.61,-2003.87"/>
 <polygon fill="black" stroke="black" stroke-width="2" points="4366.03,-2007.07 4374.05,-2000.15 4363.46,-2000.56 4366.03,-2007.07"/>
 </g>
-<!-- 999999 -->
+<!-- 338931 -->
 <g id="node239" class="node">
-<title>999999</title>
+<title>338931</title>
 <text text-anchor="middle" x="4988" y="-22.8" font-family="Times,serif" font-size="14.00">James Beyer</text>
-<text text-anchor="middle" x="4988" y="-7.8" font-family="Times,serif" font-size="14.00">University of Oklahoma (2025)</text>
+<text text-anchor="middle" x="4988" y="-7.8" font-family="Times,serif" font-size="14.00">The University of Oklahoma (2025)</text>
 </g>
 <!-- 173648&#45;&gt;999999 -->
 <g id="edge1" class="edge">
