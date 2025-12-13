@@ -3,7 +3,6 @@ layout: default
 ---
 
 ### About Me
-<br/>
 
 [CV](https://drive.google.com/file/d/1GteexAMUcl4p-Qd1MuFYPjpGtCoITJp4/view?usp=sharing)
 
