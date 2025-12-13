@@ -8,7 +8,7 @@ mathjax: true
 A demo application showing order-\\(k\\) spherical bicolored Vornoi diagrams. 
 <!--more-->
 
-The application draws the order-\\(k\\) spherical bicolored Voronoi diagram for \\( 4 \leq n \leq 9 \\) dots, with \\( 2 \\leq k \\leq \\lfloor n/2 \\rfloor \\).
+The application draws the order-\\(k\\) spherical bicolored Voronoi diagram for \\( 4 \leq n \leq 9 \\) dots, with \\( 1 \\leq k \\leq  n-1 \\).
 
 [spherical bicolored higher Voronoi diagrams](https://jebeyer.github.io/higher-voronoi/index.html)
 
