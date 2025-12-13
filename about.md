@@ -14,9 +14,9 @@ I also worked as a geodetic engineer for a commercial satellite imagery company 
 
 ### Music
 
-In my spare time, I enjoy seeking out new music and creating noise using synthesizers and electric guitars. If you're curious, you can hear some of my recordings at [bandcamp](https://whistlingkitty.bandcamp.com). 
+In my spare time, I enjoy creating noise using synthesizers and electric guitars. You can hear some of my recordings at [bandcamp](https://whistlingkitty.bandcamp.com). 
 
-You can see what I've been listening to at [listenbrainz](https://listenbrainz.org/user/whistlingkitty/stats/).
+I also enjoy seeking out new and interesting music. You can see what I've been listening to recently at [listenbrainz](https://listenbrainz.org/user/whistlingkitty/stats/).
 
 ### Pronunciation
 
