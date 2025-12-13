@@ -5,7 +5,7 @@ mathjax: true
 
 ### Mathematics
 
-Most of my research is centered around [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. In my research, I often consider connections to skein algebras, knot theory, decorated Teichmüller spaces, and higher Teichmüller spaces, while using tools from commutative algebra, algebraic geometry, representation theory, and combinatorics.
+Most of my research is centered around [cluster algebras](https://en.wikipedia.org/wiki/Cluster_algebra), a type of commutative ring with connections to many different areas of mathematics and physics. I often consider connections to skein algebras, knot theory, decorated Teichmüller spaces, and higher Teichmüller spaces, while using tools from commutative algebra, algebraic geometry, representation theory, and combinatorics.
 
 ### Links
 
