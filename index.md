@@ -5,7 +5,7 @@ layout: default
 ### Welcome
 
 <br/> 
-Hello! 
+Hello!
 
 I completed my PhD in mathematics at the [University of Oklahoma](https://math.ou.edu/), working under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My math genealogy can be viewed [here](./2025/06/18/math-genealogy.html).
 
@@ -13,16 +13,11 @@ My mathematical research interests include cluster algebras, skein algebras, and
 
 Beginning Spring 2026, I will be a postdoc at the [Instituto de Matemáticas](https://www.matem.unam.mx/) of the Universidad Nacional Autónoma de México (UNAM) in Mexico City.
 
----
-
-#### Contact
+### Contact
 
 jebeyerou at gmail com
 
----
-
-#### Links
-
+### Links
 
 <a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a> 
 <a href="https://scholar.google.com/citations?&user=pRnb5PwAAAAJ"><img src="./assets/Google_Scholar_logo.png" alt="GoogleScholar" width="48"/></a>
