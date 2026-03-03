@@ -6,11 +6,11 @@ layout: default
 
 Hello!
 
-I completed my PhD in mathematics at the [University of Oklahoma](https://math.ou.edu/), working under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My math genealogy can be viewed [here](./2025/06/18/math-genealogy.html).
+I am a postdoc at the [Instituto de Matemáticas](https://www.matem.unam.mx/) of the Universidad Nacional Autónoma de México (UNAM) in Mexico City, working with [Christof Geiß](https://www.matem.unam.mx/~christof/) and [José Simental](https://sites.google.com/view/jsimental).
+
+I completed my PhD in mathematics at the [University of Oklahoma](https://math.ou.edu/), under the direction of [Greg Muller](https://math.ou.edu/~gmuller/). My math genealogy can be viewed [here](./2025/06/18/math-genealogy.html).
 
 My mathematical research interests include cluster algebras, skein algebras, and other things at the intersection of algebraic geometry, low-dimensional topology, and combinatorics. More information is on the [research](./research.html) page.
-
-Beginning Spring 2026, I will be a postdoc at the [Instituto de Matemáticas](https://www.matem.unam.mx/) of the Universidad Nacional Autónoma de México (UNAM) in Mexico City.
 
 ### Contact
 
