@@ -6,7 +6,7 @@ layout: default
 
 [CV](https://drive.google.com/file/d/1GteexAMUcl4p-Qd1MuFYPjpGtCoITJp4/view?usp=sharing)
 
-Beginning Spring 2026, I will be a postdoc at the [Instituto de Matemáticas](https://www.matem.unam.mx/) of the Universidad Nacional Autónoma de México (UNAM) in Mexico City.
+I am a postdoc at the [Instituto de Matemáticas](https://www.matem.unam.mx/) of the Universidad Nacional Autónoma de México (UNAM) in Mexico City.
 
 I completed my PhD in mathematics at the [University of Oklahoma](http://math.ou.edu/) in Norman. Previously, I completed an MA at the University of Oklahoma, an MS at Pittsburg State University in Pittsburg, KS, and a BS at Evangel University in Springfield, MO. 
 
