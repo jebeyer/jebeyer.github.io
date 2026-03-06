@@ -14,7 +14,9 @@ My mathematical research interests include cluster algebras, skein algebras, and
 
 ### Contact
 
-jebeyerou at gmail com
+jebeyer at im.unam.mx
+
+jebeyerou at gmail.com
 
 ### Links
 
