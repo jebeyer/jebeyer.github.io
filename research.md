@@ -21,6 +21,9 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 #### Preprints
 
+* **Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv](https://arxiv.org/abs/2608.22208)) <br/>
+   We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \(\mathbb{F}_2\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \(\mathbb{F}_2\). We also show that these formulae satisfy certain recurrence relations.
+  
 * **Separating dots with circles** ([arXiv](https://arxiv.org/abs/2505.22851)) <br/>
    *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
    Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition. <br/><br/>
