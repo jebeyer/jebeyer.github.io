@@ -16,7 +16,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 * **Deep Points of Cluster Algebras** ([arXiv](https://arxiv.org/abs/2403.15589)) <br/>
    *Joint with [Greg Muller](https://math.ou.edu/~gmuller/)* <br/>
-   *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, [doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027) <br/>
+   *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, [doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027)
     <!-- details -->
     <!-- summary -->
     Abstract
@@ -27,7 +27,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 #### Preprints
 
-* **Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv](https://arxiv.org/abs/2608.22208)) <br/>
+* **Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv](https://arxiv.org/abs/2608.22208))
     <!-- details -->
     <!-- summary -->
     Abstract
@@ -37,7 +37,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
     <!-- enddetails -->   
 
 * **Separating dots with circles** ([arXiv](https://arxiv.org/abs/2505.22851)) <br/>
-   *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
+   *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller*
     <!-- details -->
     <!-- summary -->
     Abstract
@@ -45,14 +45,15 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
     Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition.
     <!-- enddetails -->
-   Two demo applications related to this project:   
+  
+   Two demo applications related to this project:
   * [Circles and Dots](./circles-and-dots/index.html)
   * [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 
 #### In Preparation
 
 * **Cluster Algebras of Voronoi Decompositions** <br/>
-   *Joint with Jaewon Min and Greg Muller* <br/>
+   *Joint with Jaewon Min and Greg Muller*
     <!-- details -->
     <!-- summary -->
     Abstract
@@ -62,7 +63,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
     <!-- enddetails -->
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
-   *Joint with Greg Muller* <br/>
+   *Joint with Greg Muller*
     <!-- details -->
     <!-- summary -->
     Abstract
@@ -73,15 +74,16 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 ### PhD Dissertation
 
-* **Deep Points of Cluster Varieties** ([ProQuest](https://www.proquest.com/docview/3199939057?sourcetype=Dissertations%20&%20Theses)) <br/>
-   <details name="dissertation-abstract">
-     <summary>Abstract</summary>
-     <p>
-       (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
-       We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra and its upper cluster algebra.<br/>
-       We then study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
-     </p>
-   </details>
+* **Deep Points of Cluster Varieties** ([ProQuest](https://www.proquest.com/docview/3199939057?sourcetype=Dissertations%20&%20Theses))
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
+
+    (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/>
+    We describe the deep points of cluster algebras of unpunctured polygons, unpunctured marked surfaces, punctured polygons, and punctured surfaces with at least two boundary marked points. As a consequence, we classify the deep points of cluster algebras of types \\(A_n\\) and \\(D_n\\). We also classify the deep points of the Markov cluster algebra and its upper cluster algebra.<br/>
+    We then study the deep points of cluster algebras of types \\(B_n\\), \\(C_n\\), and \\(F_4\\) via foldings of quivers of types \\(A_{2n-1}\\), \\(D_{n+1}\\) and \\(E_6\\), respectively.
+    <!-- enddetails -->    
 
 ### Other
 
