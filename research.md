@@ -16,7 +16,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 <!-- details -->
 <!-- summary -->
-**Deep Points of Cluster Algebras** ([arXiv](https://arxiv.org/abs/2403.15589))    
+<b>Deep Points of Cluster Algebras</b> ([arXiv](https://arxiv.org/abs/2403.15589))    
 *Joint with [Greg Muller](https://math.ou.edu/~gmuller/)*   
 *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, [doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027)
 <!-- endsummary -->
