@@ -17,6 +17,30 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     {% endif %}
+    <style>
+      details {
+        margin: 1em 0;
+      }
+      summary {
+        list-style: none;
+        display: flex;
+        gap: 0.5em;
+        margin-bottom: 0.5em;
+        align-items: start;
+        cursor: pointer;
+        color: #880000;
+      }
+      summary::before {
+        content: '▶︎';
+        width: 1em;
+        flex-shrink: 0;
+        transition: 0.3s;
+      }
+      details[open] > summary::before {
+        transform: rotate(90deg);
+        transform-origin: 40% 45% 0;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
