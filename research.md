@@ -62,12 +62,9 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
-   <details name="sepcurvesg2x7-abstract">
-     <summary>Abstract</summary>
-     <p>
+   [details="Abstract"]
        We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
-     </p>
-   </details>
+   [/details]
     
 
 ### PhD Dissertation
