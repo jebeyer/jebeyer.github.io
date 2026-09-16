@@ -17,34 +17,35 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 * **Deep Points of Cluster Algebras** ([arXiv](https://arxiv.org/abs/2403.15589)) <br/>
    *Joint with [Greg Muller](https://math.ou.edu/~gmuller/)* <br/>
    *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, [doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027) <br/>
-   <details name="deeppoints-abstract">
-     <summary>Abstract</summary>
-     <p>
-       We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
-     </p>
-   </details>
-     
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
+
+    We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
+    <!-- enddetails -->
 
 #### Preprints
 
 * **Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv](https://arxiv.org/abs/2608.22208)) <br/>
-   <details name="pointcounts-abstract">
-     <summary>Abstract</summary>
-     <p>
-       We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \\(\mathbb{F}_2\\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \\(\mathbb{F}_2\\). We also show that these formulae satisfy certain recurrence relations.
-     </p>
-   </details>
-   
-  
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
+
+    We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \\(\mathbb{F}_2\\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \\(\mathbb{F}_2\\). We also show that these formulae satisfy certain recurrence relations.
+    <!-- enddetails -->   
+
 * **Separating dots with circles** ([arXiv](https://arxiv.org/abs/2505.22851)) <br/>
    *Joint with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller* <br/>
-   <details name="sepdotscircles-abstract">
-     <summary>Abstract</summary>
-     <p>
-       Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition.
-     </p>
-   </details>
-   Two demo applications related to this project:  
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
+
+    Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition.
+    <!-- enddetails -->
+   Two demo applications related to this project:   
   * [Circles and Dots](./circles-and-dots/index.html)
   * [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 
@@ -67,7 +68,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
     Abstract
     <!-- endsummary -->
     
-       We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
+    We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
     <!-- enddetails -->    
 
 ### PhD Dissertation
