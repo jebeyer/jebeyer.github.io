@@ -3,9 +3,9 @@
 {% capture endsummary %}<!-- endsummary -->{% endcapture%}
 {% capture enddetails %}<!-- enddetails -->{% endcapture%}
 {% assign newhtml = include.html |
- replace: summary, '<summary>' |
+ replace: summary, '<summary style="margin:0">' |
  replace: endsummary, '</summary>' |
- replace: details, '<details>' |
+ replace: details, '<details style="margin:0">' |
  replace: enddetails, '</details>'
 %}
 
