@@ -16,7 +16,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 <!-- details -->
 <!-- summary -->
-**Deep Points of Cluster Algebras**, with [Greg Muller](https://math.ou.edu/~gmuller/), *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, ([doi](https://doi.org/10.1093/imrn/rnaf027)) ([arXiv](https://arxiv.org/abs/2403.15589))
+*Deep Points of Cluster Algebras*, with [Greg Muller](https://math.ou.edu/~gmuller/), *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, ([doi](https://doi.org/10.1093/imrn/rnaf027)) ([arXiv](https://arxiv.org/abs/2403.15589))
 <!-- endsummary -->  
   
 We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
@@ -26,14 +26,14 @@ We initiate a systematic study of the deep points of a cluster algebra; that is,
 
 <!-- details -->
 <!-- summary -->
-**Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv](https://arxiv.org/abs/2608.22208))
+*Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields* ([arXiv](https://arxiv.org/abs/2608.22208))
 <!-- endsummary -->
   
 We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \\(\mathbb{F}_2\\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \\(\mathbb{F}_2\\). We also show that these formulae satisfy certain recurrence relations.
 <!-- enddetails -->
 <!-- details -->
 <!-- summary -->
-**Separating dots with circles**, with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller ([arXiv](https://arxiv.org/abs/2505.22851))
+*Separating dots with circles*, with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller ([arXiv](https://arxiv.org/abs/2505.22851))
 <!-- endsummary -->
   
 Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition. <br/><br/>
@@ -46,14 +46,14 @@ There are also two demo applications related to this project: <br/>
 
 <!-- details -->
 <!-- summary -->
-**Cluster Algebras of Voronoi Decompositions**, with Jaewon Min and Greg Muller
+*Cluster Algebras of Voronoi Decompositions*, with Jaewon Min and Greg Muller
 <!-- endsummary -->
 
 Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure.
 <!-- enddetails -->
 <!-- details -->
 <!-- summary -->
-**Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra**, with Greg Muller
+*Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra*, with Greg Muller
 <!-- endsummary -->
 
 We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
@@ -63,7 +63,7 @@ We establish a correspondence between separating curves in the genus 2 surface a
 
 <!-- details -->
 <!-- summary -->
-**Deep Points of Cluster Varieties** ([ProQuest](https://www.proquest.com/docview/3199939057?sourcetype=Dissertations%20&%20Theses))
+*Deep Points of Cluster Varieties* ([ProQuest](https://www.proquest.com/docview/3199939057?sourcetype=Dissertations%20&%20Theses))
 <!-- endsummary -->
   
 (Includes portions of the above paper *Deep Points of Cluster Algebras*.) <br/><br/>
