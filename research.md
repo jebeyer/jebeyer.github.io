@@ -22,7 +22,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
 <!-- enddetails -->
 
-### Preprints
+#### Preprints
 
 <!-- details -->
 <!-- summary -->
@@ -42,7 +42,7 @@ There are also two demo applications related to this project: <br/>
 * [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 <!-- enddetails -->
 
-### In Preparation
+#### In Preparation
 
 <!-- details -->
 <!-- summary -->
@@ -51,7 +51,6 @@ There are also two demo applications related to this project: <br/>
 
 Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure.
 <!-- enddetails -->
-
 <!-- details -->
 <!-- summary -->
 **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra**, with Greg Muller
