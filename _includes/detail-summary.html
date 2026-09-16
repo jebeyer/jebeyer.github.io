@@ -9,4 +9,4 @@
  replace: enddetails, '</details>'
 %}
 
-{{ newhtml | strip_newlines }}
+{{ newhtml | escape | strip_newlines }}
