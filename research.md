@@ -52,20 +52,23 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 * **Cluster Algebras of Voronoi Decompositions** <br/>
    *Joint with Jaewon Min and Greg Muller* <br/>
-   <details name="clustervoronoi-abstract">
-     <summary>Abstract</summary>
-     <p>
-       Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure.
-     </p>
-   </details>
-     
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
+
+    Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure.
+    <!-- enddetails -->
 
 * **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
    *Joint with Greg Muller* <br/>
-   [details="Abstract"]
-       We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
-   [/details]
+    <!-- details -->
+    <!-- summary -->
+    Abstract
+    <!-- endsummary -->
     
+       We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
+    <!-- enddetails -->    
 
 ### PhD Dissertation
 
