@@ -22,7 +22,7 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
 <!-- enddetails -->
 
-#### Preprints
+### Preprints
 
 <!-- details -->
 <!-- summary -->
@@ -31,7 +31,6 @@ We initiate a systematic study of the deep points of a cluster algebra; that is,
   
 We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \\(\mathbb{F}_2\\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \\(\mathbb{F}_2\\). We also show that these formulae satisfy certain recurrence relations.
 <!-- enddetails -->
-
 <!-- details -->
 <!-- summary -->
 **Separating dots with circles**, with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller ([arXiv](https://arxiv.org/abs/2505.22851))
@@ -43,7 +42,7 @@ There are also two demo applications related to this project: <br/>
 * [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 <!-- enddetails -->
 
-#### In Preparation
+### In Preparation
 
 <!-- details -->
 <!-- summary -->
