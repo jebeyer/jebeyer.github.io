@@ -9,13 +9,11 @@ Most of my research is centered around [cluster algebras](https://en.wikipedia.o
 
 ### Papers
 
-<!-- details -->
-<!-- summary -->
-*Deep Points of Cluster Algebras*, with [Greg Muller](https://math.ou.edu/~gmuller/), *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, ([doi](https://doi.org/10.1093/imrn/rnaf027)) ([arXiv](https://arxiv.org/abs/2403.15589))
-<!-- endsummary -->
+* *Deep Points of Cluster Algebras* ([arXiv:2403.15589](https://arxiv.org/abs/2403.15589))<br/>
+    with [Greg Muller](https://math.ou.edu/~gmuller/) <br/>
+    *Int. Math. Res. Not. IMRN*, Volume 2025, Issue 4, February 2025, ([doi:10.1093/imrn/rnaf027](https://doi.org/10.1093/imrn/rnaf027)) 
 
-We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
-<!-- enddetails -->
+    > We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
 
 #### Preprints
 
