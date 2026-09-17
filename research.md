@@ -24,8 +24,10 @@ Most of my research is centered around cluster algebras, a type of commutative r
 * **Separating dots with circles** ([arXiv:2505.22851](https://arxiv.org/abs/2505.22851)) <br/>
     with [Jaewon Min](https://sites.google.com/view/jaewonmin/home) and Greg Muller
 
-    > Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition. <br/><br/>
-    Demo applications related to this project: [Circles and Dots](./circles-and-dots/index.html) and [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
+    > Given a finite set of points in general position in the plane or sphere, we count the number of ways to separate those points using two types of circles: circles through three of the points, and circles through none of the points (up to an equivalence). In each case, we show the number of circles which separate the points into subsets of size \\(k\\) and \\(l\\) is independent of the configuration of points, and we provide an explicit formula in each case. We also consider how the circles change as the configuration of dots varies continuously. We show that an associated higher order Voronoi decomposition of the sphere changes by a sequence of local moves. As a consequence, an associated cluster algebra is independent of the configuration of dots, and only depends on the number of dots and the order of the Voronoi decomposition.
+
+    - [Circles and Dots](./circles-and-dots/index.html)
+    - [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
 
 #### In Preparation
 
