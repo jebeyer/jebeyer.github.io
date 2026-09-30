@@ -15,7 +15,7 @@ Most of my research is centered around cluster algebras, a type of commutative r
 
     > We initiate a systematic study of the deep points of a cluster algebra; that is, the points in the associated variety which are not in any cluster torus. We describe the deep points of cluster algebras of type A, rank 2, Markov, and unpunctured surface type.
 
-#### Preprints
+### Preprints
 
 * **Deep Points of Cluster Algebras II: Punctured Marked Surfaces** ([arXiv:2609.38068](https://arxiv.org/abs/2609.38068))
 
@@ -32,18 +32,6 @@ Most of my research is centered around cluster algebras, a type of commutative r
 
     - [Circles and Dots](./circles-and-dots/index.html)
     - [Spherical Bicolored Higher Voronoi Diagrams](./higher-voronoi/index.html)
-
-#### In Preparation
-
-* **Cluster Algebras of Voronoi Decompositions** <br/>
-    with Jaewon Min and Greg Muller
-
-    > Following *Separating Dots with Circles*, we show that a spherical bicolored order-\\(k\\) Voronoi decomposition admits a natural cluster structure.
-
-* **Separating Curves in the Genus 2 Surface and the \\( X_7 \\) Cluster Algebra** <br/>
-    with Greg Muller
-
-    > We establish a correspondence between separating curves in the genus 2 surface and a subset of cluster variables in the \\( X_7 \\) cluster algebra. We use this correspondence to show that the separating curve complex of the genus 2 surface is a six-dimensional pseudomanifold.
 
 ### PhD Dissertation
 
