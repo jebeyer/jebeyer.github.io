@@ -51,6 +51,6 @@ Most of my research is centered around cluster algebras, a type of commutative r
 
 <a href="https://arxiv.org/a/beyer_j_2.html"><img src="./assets/arxiv-logo.png" alt="arXiv" width="100"/></a>
 <a href="https://scholar.google.com/citations?&user=pRnb5PwAAAAJ"><img src="./assets/Google_Scholar_logo.png" alt="GoogleScholar" width="48"/></a>
-<a href="https://zbmath.org/authors/beyer.james"><img src="./assets/zbmath-logo.png" alt="zbMath" width="48"/></a>
-<a href="https://mathscinet.ams.org/mathscinet/author?authorId=1655864"><img src="./assets/mathscinet-logo.png" alt="MathSciNet" width="100"/></a>
+<a href="https://zbmath.org/authors/beyer.james"><img src="./assets/zbmath_logo.png" alt="zbMath" width="48"/></a>
+<a href="https://mathscinet.ams.org/mathscinet/author?authorId=1655864"><img src="./assets/mathscinet_logo.png" alt="MathSciNet" width="100"/></a>
 
