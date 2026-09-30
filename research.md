@@ -17,6 +17,10 @@ Most of my research is centered around cluster algebras, a type of commutative r
 
 #### Preprints
 
+* **Deep Points of Cluster Algebras II: Punctured Marked Surfaces** ([arXiv:2609.38068](https://arxiv.org/abs/2609.38068))
+
+    > We classify the deep points of cluster varieties of cluster algebras of punctured marked surfaces with boundary. 
+  
 * **Point Counts of Cluster Varieties of Marked Surfaces Over Finite Fields** ([arXiv:2608.22208](https://arxiv.org/abs/2608.22208))
 
     > We establish formulae for point counts of cluster varieties of cluster algebras of marked surfaces, possibly with punctures. We then establish formulae for the number of non-deep points in these cluster varieties over \\(\mathbb{F}_2\\), which gives us the number of algebraic tori necessary to cover the cluster manifold over \\(\mathbb{F}_2\\). We also show that these formulae satisfy certain recurrence relations.
